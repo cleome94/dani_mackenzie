@@ -1,5 +1,5 @@
 .footer{
-    display:none;
+    /* display:none; */
 }
 /* 모바일 */
 .header{
@@ -86,7 +86,9 @@
     border:0 none;
     position:relative;
     top:-40px;
+    cursor:pointer;
     float:right;
+
 }
 .search_box1 input{
     margin-top:60px;
@@ -121,7 +123,6 @@
     background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
     border:0 none;
-    cursor:pointer;
     margin-right:30px;
     float:left;
 }
@@ -142,8 +143,10 @@
     width:100%;
     height:210px;
     background:#fff;
+    position: relative;
+    z-index:1;
     /* 숨기기 */
-    display:none;
+    /* display:none; */
 }
 .search_box2 fieldset{
     border:none;
@@ -201,76 +204,160 @@
     width:100%;
     margin:auto;
     position: relative;
-    z-index:-1;
+    /* z-index:-1; */
     top:-12px
 }
 .main_image img{
     width:100%
 }
 .b_prod{
-    width:100%;
-    height:639px;
     background:#ece6e3;
     margin-top:-5px;
     margin-bottom:65px;
 }
 .b_prod h3{
-    padding:45px 0 15px 0;
+    padding:45px 0 25px 0;
     font-size:24px;
     font-weight:500;
     text-align:center
 }
 .b_prod ul{
-    width:450px;
     margin:auto;
+    text-align:center
+}
+.b_prod li{
+    display:inline-block;
+    margin:25px
 }
 .bp_1{
+    display:block;
     width:200px;
     height:240px;
     background:url(../images/bp_1.jpg)no-repeat;
     text-indent:-9999px;
-    margin-right:50px;
-    float:left
+
 }
 .bp_2{
+    display:block;
     width:200px;
     height:240px;
     background:url(../images/bp_2.jpg)no-repeat;
     text-indent:-9999px;
-    float:left
+
 }
 .bp_3{
+    display:block;
     width:200px;
     height:240px;
     background:url(../images/bp_3.jpg)no-repeat;
     text-indent:-9999px;
-    margin-top:45px;
-    margin-right:50px;
-    float:left
+
+
 }
 .bp_4{
+    display:block;
     width:200px;
     height:240px;
     background:url(../images/bp_4.jpg)no-repeat;
     text-indent:-9999px;
-    margin-top:45px;
-    float:left
+
+}
+.e_prod{
+    clear:both;
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+.e_prod ul{
+    text-align:center;
+}
+.e_prod li{
+    display:inline-block;
+    
 }
 .ep_1{
+    display:block;
     width:348px;
     height:230px;
-    background:url(../images/ep_1.jpg)no-repeat;
-    text-indent:-9999px;
+    background:url(../images/ep_1.jpg)no-repeat center;
+    text-indent:-9999px
 }
 .ep_2{
+    display:block;
     width:348px;
     height:230px;
-    background:url(../images/ep_2.jpg)no-repeat;
-    text-indent:-9999px;
+    background:url(../images/ep_2.jpg)no-repeat center;
+    text-indent:-9999px
 }
-.event a{
+.event{
+    clear:both;
+    /* width:50%; */
+    text-align:center;
+    margin:0 auto;
+}
+/* .event_1{
     width:696px;
     height:451px;
     background:url(../images/event1.jpg)no-repeat;
     text-indent:-9999px;
+}
+.event_2{
+    width:696px;
+    height:451px;
+    background:url(../images/event2.jpg)no-repeat;
+    text-indent:-9999px
+}
+ */
+.event_1 img{
+    max-width: 100%;
+    width:70%;
+}
+.event_2{
+    display:none
+}
+.b_story{
+    margin-top:-4px;
+    height:114px;
+    background:#ece6e3;
+}
+.b_story p{
+    font-size:20px;
+    font-weight:500;
+    text-align:center;
+    padding:33px 0;
+}
+.footer{
+    margin-top:50px;
+    font-size:14px;
+}
+.cs{
+    font-size:14px;
+    margin-left:35px
+}
+.customer ul{
+    color:#9c9a9b;
+    padding:25px 0 25px 50px
+}
+.customer li{
+    line-height:25px;
+}
+.customer li a{
+    color:#9c9a9b;
+}
+.f_info{
+    margin-top:30px;
+    color:#a08d7c;
+    text-align:center;
+    line-height:20px
+}
+.f_link{
+    margin-top:30px;
+    text-align:center
+}
+.f_link ul{
+    display:flex;
+}
+.f_link li a{
+    color:#a08d7c;
+    margin-right:20px;
 }
