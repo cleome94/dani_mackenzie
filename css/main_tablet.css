@@ -7,114 +7,49 @@
     height:103px;
     border-top:2px solid#a08d7c;
     box-sizing:border-box;
-    background:#a08d7c;
+    /* background:#a08d7c; */
     margin:auto;
-    position:relative
+    position:relative;
+    z-index:1;
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto 0;
+    width:117px;
+    height:83px;
+    margin:10px auto 0;
 }
 .logo a{
     display:block;
-    width:230px;
-    height:63px;
-    background:url(../images/m_logo.png)no-repeat;
+    width:117px;
+    height:83px;
+    background:url(../images/logo.png)no-repeat;
     text-indent:-9999px
 }
-.gnb_wrap{
-    position:absolute;
-    width:100%;
-    height:900px;
-    left:0;top:-2px;
-    background:#d6c9c1;
-    z-index:10;
-    /* 숨기기 */
-    display:none
-}
-.gnb_btn{
-    width:40px;
-    height:33px;
-    background:url(../images/menu.png)no-repeat;
-    text-indent:-9999px;
-    position:absolute;
-    left:35px;top:33px;
-}
 .gnb{
-    margin-top:207px;
-    margin-left:35px;
-    margin-right:35px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.gnb > ul{
+    display:flex;
+    margin-top:-53px
+}
+.gnb ul > li{
+    font-size:16px;
+    font-weight:500;
 }
 .gnb a{
-    color:#fff
+    color:#fff;
+    padding:15px
 }
-.menu li{
-    margin-left:53px;
-    font-size:26px;
-    font-weight:500;
-}
-#shop_cate a{
-    margin-left:35px;
-    font-size:16px;
-    color:#a08d7c;
-}
-.gnb2{
-    margin-top:30px;
+#shop_cate{
+    display:none;
 }
 .user_menu{
-    font-size:18px;
-    font-weight:500;
-    margin-top:-600px;
-}
-.user_menu li{
-    float:left;
-    margin-right:30px;
-}
-.search_box1{
-    clear:both
-}
-.search_box1 fieldset{
-    border:none;
-    padding:0;
-}
-.search_box1 button{
-    width:30px;
-    height:30px;
-    background:url(../images/search.png)no-repeat;
-    text-indent:-9999px;
-    border:0 none;
-    position:relative;
-    top:-40px;
-    cursor:pointer;
     float:right;
-
-}
-.search_box1 input{
-    margin-top:60px;
-    width:100%;
-    height:40px;
-    font-size:14px;
-    box-sizing:border-box;
-    background:#d6c9c1;
-    border:0 none;
-    border-bottom:2px solid#fff;
-    outline:0 none
-}
-.gnb_exit{
-    display:block;
-    width:35px;
-    height:35px;
-    background:url(../images/exit.png)no-repeat;
-    text-indent:-9999px;
     position:relative;
-    top:-160px;
-    float:right;
+    top:35px;
 }
-.sch_menu{
-    position:relative;
-    top:-50px;
-    float:right;
+.search_box1, .gnb_exit, .gnb_btn, .cart{
+    display:none
 }
 .search{
     display:block;
@@ -122,33 +57,22 @@
     height:30px;
     background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
-    border:0 none;
-    margin-right:30px;
-    float:left;
-}
-.cart{
-    display:block;
-    width:30px;
-    height:30px;
-    background:url(../images/m_cart.png)no-repeat;
-    text-indent:-9999px;
-    float:left;
+    float:right;
     margin-right:35px;
+    margin-top:35px;
 }
 .search_box2{
-    width:100%;
-    margin-top:18px;
-    /* 숨기기 */
-    display:none;
+    width:450px;
+    position:absolute;
+    top:130px;
+    right:35px
 }
 .search_box2 form{
     width:100%;
     height:210px;
     background:#fff;
-    position: relative;
-    z-index:1;
-    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
-    /* display:none; */
+    position:relative;
+    z-index:10
 }
 .search_box2 fieldset{
     border:none;
@@ -165,7 +89,6 @@
     border-bottom:2px solid#000;
     outline:0 none;
     margin-top:60px;
-
 }
 .search_box2 button{
     width:30px;
@@ -173,21 +96,22 @@
     background:url(../images/search_black.png)no-repeat;
     text-indent:-9999px;
     border:0 none;
-    /* margin-left:10px; */
     cursor:pointer;
     float:right;
     position:relative;
-    top:-35px;
+    top:-35px
 }
 .popular{
     margin-top:20px;
-    margin-left:60px;
+    margin-left:10px
 }
 .popular p{
-    margin-top:10px;
+    margin-top:5px;
+    margin-left:15px;
 }
 .popular a{
-    margin-left:20px;
+    margin-right:18px;
+    font-size:13px;
 }
 .sch_exit{
     display:block;
@@ -197,16 +121,16 @@
     text-indent:-9999px;
     background-size:cover;
     position:absolute;
-    margin-top:-155px;
-    right:35px
+    margin-top:-175px;
+    right:15px
 }
+/* 메인 */
 .content{
     clear:both;
     width:100%;
     margin:auto;
     position: relative;
-    /* z-index:-1; */
-    top:-12px
+    top:-125px
 }
 .main_image img{
     width:100%
@@ -235,10 +159,8 @@
 .b_prod img{
     width:100%
 }
-.e_line{
-    width:100%;
-    height:60px;
-    background:#d6c9c1;
+.e_wrap{
+    margin:0 35px 0 35px;
 }
 .e_prod{
     clear:both;
@@ -256,6 +178,11 @@
 .e_prod img{
     width:100%;
 }
+.e_line{
+    width:100%;
+    height:60px;
+    background:#d6c9c1;
+}
 .event{
     clear:both;
     /* width:50%; */
@@ -271,52 +198,49 @@
     width:100%;
     /* display:none */
 }
-.b_story{
+/* .b_story{
     height:114px;
     background:#ece6e3;
-}
-.b_story p{
+} */
+.b_story1 a{
     font-size:20px;
     font-weight:500;
-    text-align:center;
+    transform:rotate(-90deg);
+    /* text-align:center; */
     padding:33px 0;
+    position:fixed;
+    left:0%;
+    top:700px;
+    color:#7c7d7f;
+    /* 숨기기 없애기!!!!!!!!!!!!!!!!!!!!!!!!! */
+    display:none;
+}
+.b_story2{
+    font-size:20px;
+    font-weight:500;
+    text-align:right;
+    margin-top:35px;
+    margin-right:35px;
 }
 .footer{
     margin-top:50px;
     font-size:14px;
 }
+.f_wrap{
+    height:428px;
+    background:#ece6e3;
+}
 .cs{
-    display:block;
-    position:relative;
-    color:#292929;
-    font-size:14px;
-    margin-left:35px
-}
-.cs::after{
-    content:"";
-    text-align:center;
-    transform:rotate(-180deg);
-    transition:transform 120ms 200ms ease-out;
-    display:block;
-    position:absolute;
-    right:35px;
-    top:10px;
-    width:23px;
-    height:13px;
-    background:url(../images/cs_down.png)no-repeat 50% 50%;
-    background-size:auto 10px;
-}
-.on::after{
-    transform:rotate(0deg);
-    transition:transform 120ms 200ms ease-out;
+    display:none
 }
 .customer ul{
     color:#9c9a9b;
     padding:25px 0 25px 60px;
-    /* display:none; */
+    float:right
 }
 .customer li{
     line-height:25px;
+    text-align:center;
 }
 .customer li a{
     color:#9c9a9b;
@@ -328,7 +252,11 @@
     line-height:20px
 }
 .f_info h2{
-    display:none;
+    width:117px;
+    height:83px;
+    background:url(../images/f_logo.png)no-repeat;
+    text-indent:-9999px;
+    margin-top:30px;
 }
 .f_link{
     margin-top:30px;

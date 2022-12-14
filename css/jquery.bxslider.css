@@ -10,6 +10,14 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+.event .bx-wrapper {
+  position: relative;
+  margin-bottom:0px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
 .bx-wrapper img {
   max-width: 100%;
   display: block;
@@ -47,6 +55,12 @@ ul.bxslider {
   bottom: -30px;
   width: 100%;
 }
+.event .bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
 /* LOADER */
 .bx-wrapper .bx-loading {
   min-height: 50px;
@@ -79,10 +93,27 @@ ul.bxslider {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+.event .bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgb(255, 255, 255);
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active,
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
   background: #000;
+}
+.event .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: rgb(255, 136, 0);
 }
 .bx-wrapper .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
