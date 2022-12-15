@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대니멕켄지 Dani Mackenzie</title>
+    <title>(모바일)대니멕켄지 Dani Mackenzie</title>
     <link rel="stylesheet" type="text/css" href="css/css_reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
@@ -15,7 +15,22 @@
 <body>
     <header id="header" class="header">
         <h1 class="logo"><a href="#">대니멕켄지</a></h1>
-
+        <div class="gnb0">
+            <h2 class="hide">주요메뉴</h2>
+            <ul class="menu1">
+                <li><a class="gnb01" href="#">SHOP</a></li>
+                <li><a class="gnb02" href="#">STORE</a></li>
+                <li><a class="gnb02" href="#">EVENT</a></li>
+                <li><a class="gnb02" href="#">Q&A</a></li>
+            </ul>
+            <h2 class="hide">사용자 메뉴</h2>
+            <ul class="user_menu0">
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">CART</a></li>
+                <li><a href="#">ORDER</a></li>
+            </ul>
+        </div>
         <div class="gnb_wrap">
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
@@ -59,15 +74,16 @@
             </nav>
         </div>
         <a href="#none" class="gnb_btn">메뉴 열기</a>
-        <!-- <section class="fixed_menu">
+        <section class="fixed_menu">
             <h2 class="hide">편의 메뉴</h2>
             <ul>
-                <li><a href="#">메뉴 열기</a></li>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">찜 목록</a></li>
-                <li><a href="#">마이페이지</a></li>
+                <li><a href="#" class="f_m1">메뉴 열기</a></li>
+                <li><a href="#" class="f_m2">홈</a></li>
+                <li><a href="#" class="f_m3">찜 목록</a></li>
+                <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>
-        </section> -->
+        </section>
+        
         <div class="sch_menu">
             <a class="search" href="#">검색창 열기</a>
             <a class="cart" href="#">장바구니</a>
@@ -108,12 +124,16 @@
         <h2 class="hide">상품 카테고리</h2>
         <section class="b_prod">
             <h3 class="bp">Best Products</h3>
-            <ul>
-                <li><a href="#" class="bp_1"><img src="images/bp01.jpg" alt="PURE OIL PERFUME"></a></li>
-                <li><a href="#" class="bp_2"><img src="images/bp02.jpg" alt="DIFFUSER"></a></li>
-                <li><a href="#" class="bp_3"><img src="images/bp03.jpg" alt="HAND CREAM"></a></li>
-                <li><a href="#" class="bp_4"><img src="images/bp04.jpg" alt="ROOM SPRAY"></a></li>
-            </ul>
+            <div class="bp1_wrap">
+                <div class="bp2">
+                    <p><a href="#" class="bp_1"><img src="images/bp01.jpg" alt="PURE OIL PERFUME"></a></p>
+                    <p><a href="#" class="bp_2"><img src="images/bp02.jpg" alt="DIFFUSER"></a></p>
+                </div>
+                <div class="bp3">
+                    <p><a href="#" class="bp_3"><img src="images/bp03.jpg" alt="HAND CREAM"></a></p>
+                    <p><a href="#" class="bp_4"><img src="images/bp04.jpg" alt="ROOM SPRAY"></a></p>
+                </div>
+            </div>
 
         </section>
         <div class="e_wrap">
@@ -159,16 +179,18 @@
         </div>
         
         <div class="f_info">
-        <h2 class="hide">회사 정보</h2>
-            <p>Company : 주식회사 예담아이엔씨</p>
-            <p>CEO : 최은경</p>
-            <p>Business : 734-87-00332</p>
-            <address>Address : 서울특별시 성동구 연무장5가길 7 (성수동2가)</address>
-            <p>반품주소 : 서울특별시 성동구 연무장5가길 7 성수역 현대테라스타워 지하 105호</p>
-            <p>입금정보 : 우리은행 1005 403 351405 / (주)예담아이엔씨</p>
-            <p>통신판매업신고번호 : 제2022-서울성동-00773호 개인정보관리자 : admin@yedamkorea.com</p>
-            <p>고객센터 : 02-1522-0805 / 제휴문의 : dana@yedamkorea.com</p>
-            <p>Copyright(c) yedamkorea.All rights reserved.</p>
+        <h2 class="comp">회사 정보</h2>
+            <div class="f_info1">
+                <p>Company : 주식회사 예담아이엔씨</p>
+                <p>CEO : 최은경</p>
+                <p>Business : 734-87-00332</p>
+                <address>Address : 서울특별시 성동구 연무장5가길 7 (성수동2가)</address>
+                <p>반품주소 : 서울특별시 성동구 연무장5가길 7 성수역 현대테라스타워 지하 105호</p>
+                <p>입금정보 : 우리은행 1005 403 351405 / (주)예담아이엔씨</p>
+                <p>통신판매업신고번호 : 제2022-서울성동-00773호 개인정보관리자 : admin@yedamkorea.com</p>
+                <p>고객센터 : 02-1522-0805 / 제휴문의 : dana@yedamkorea.com</p>
+                <p>Copyright(c) yedamkorea.All rights reserved.</p>
+            </div>
         </div>
 
         <section class="f_link">

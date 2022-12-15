@@ -2,6 +2,9 @@ $(function(){
     $(".gnb_btn").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $(".f_m1").click(function(){
+        $(".gnb_wrap").animate({width:"toggle"}, 200);
+    });
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });

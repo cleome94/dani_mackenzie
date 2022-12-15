@@ -1,6 +1,3 @@
-.footer{
-    /* display:none; */
-}
 /* 모바일 */
 .header{
     /* width:767px; */
@@ -23,10 +20,13 @@
     background:url(../images/m_logo.png)no-repeat;
     text-indent:-9999px
 }
+.gnb0{
+    display:none
+}
 .gnb_wrap{
     position:absolute;
     width:100%;
-    height:900px;
+    height:2000px;
     left:0;top:-2px;
     background:#d6c9c1;
     z-index:10;
@@ -110,6 +110,54 @@
     position:relative;
     top:-160px;
     float:right;
+}
+
+.fixed_menu{
+    position:fixed;
+    border-top:1px solid#a08d7c;
+    background:#fff;
+    left:0;
+    right:0;
+    bottom:0;
+    height:6rem;
+    z-index:100
+}
+.fixed_menu ul{
+    display:flex;
+    justify-content:center;
+    margin-left:35px;
+    margin-right:35px;
+}
+.fixed_menu li{
+    padding:30px 11.5% 30px 11.5%;
+}
+.f_m1{
+    display:block;
+    width:41px;
+    height:33px;
+    background:url(../images/fm_menu.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m2{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/fm_home.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m3{
+    display:block;
+    width:36px;
+    height:30px;
+    background:url(../images/fm_wish.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m4{
+    display:block;
+    width:34px;
+    height:32px;
+    background:url(../images/fm_my.png)no-repeat;
+    text-indent:-9999px;
 }
 .sch_menu{
     position:relative;
@@ -222,12 +270,11 @@
     font-weight:500;
     text-align:center
 }
-.b_prod ul{
+.b_prod div{
     margin:auto;
     text-align:center;
-    display:flex;
 }
-.b_prod li{
+.b_prod p{
     display:inline-block;
     margin:25px;
     width:70%;
@@ -239,6 +286,12 @@
     width:100%;
     height:60px;
     background:#d6c9c1;
+}
+.bp2{
+    display:flex
+}
+.bp3{
+    display:flex
 }
 .e_prod{
     clear:both;
@@ -321,14 +374,37 @@
 .customer li a{
     color:#9c9a9b;
 }
-.f_info{
+.f_info h2{
+    display:block;
+    position:relative;
+    color:#292929;
+    font-size:14px;
+    margin-top:30px;
+    margin-left:35px
+}
+.comp::after{
+    content:"";
+    text-align:center;
+    transform:rotate(-180deg);
+    transition:transform 120ms 200ms ease-out;
+    display:block;
+    position:absolute;
+    right:35px;
+    top:10px;
+    width:23px;
+    height:13px;
+    background:url(../images/cs_down.png)no-repeat 50% 50%;
+    background-size:auto 10px;
+}
+.on::after{
+    transform:rotate(0deg);
+    transition:transform 120ms 200ms ease-out;
+}
+.f_info1{
     margin-top:30px;
     color:#a08d7c;
     text-align:center;
     line-height:20px
-}
-.f_info h2{
-    display:none;
 }
 .f_link{
     margin-top:30px;
@@ -347,4 +423,5 @@
 }
 .sns li{
     padding:30px 10px;
+    margin-bottom:100px;
 }

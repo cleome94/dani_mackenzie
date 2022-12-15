@@ -1,7 +1,4 @@
-.footer{
-    /* display:none; */
-}
-/* 모바일 */
+/* 태블릿 */
 .header{
     /* width:767px; */
     height:103px;
@@ -24,31 +21,163 @@
     background:url(../images/logo.png)no-repeat;
     text-indent:-9999px
 }
-.gnb{
+.gnb0{
     margin-left:20px;
     margin-right:20px;
 }
-.gnb > ul{
+.gnb0 > ul{
     display:flex;
     margin-top:-53px
 }
-.gnb ul > li{
+.gnb0 ul > li{
     font-size:16px;
     font-weight:500;
 }
-.gnb a{
+.gnb0 a{
     color:#fff;
     padding:15px
 }
-#shop_cate{
-    display:none;
-}
-.user_menu{
+.user_menu0{
     float:right;
     position:relative;
     top:35px;
 }
-.search_box1, .gnb_exit, .gnb_btn, .cart{
+.gnb_wrap{
+    position:absolute;
+    width:100%;
+    height:2000px;
+    left:0;top:-2px;
+    background:#d6c9c1;
+    z-index:10;
+    /* 숨기기 */
+    display:none
+}
+.gnb_btn{
+    width:40px;
+    height:33px;
+    background:url(../images/menu.png)no-repeat;
+    text-indent:-9999px;
+    position:absolute;
+    left:35px;top:33px;
+}
+.gnb{
+    margin-top:207px;
+    margin-left:35px;
+    margin-right:35px;
+}
+.gnb a{
+    color:#fff
+}
+.menu li{
+    margin-left:53px;
+    font-size:26px;
+    font-weight:500;
+}
+#shop_cate a{
+    margin-left:35px;
+    font-size:16px;
+    color:#a08d7c;
+}
+.gnb2{
+    margin-top:30px;
+}
+.user_menu{
+    font-size:18px;
+    font-weight:500;
+    margin-top:-600px;
+}
+.user_menu li{
+    float:left;
+    margin-right:30px;
+}
+.search_box1{
+    clear:both
+}
+.search_box1 fieldset{
+    border:none;
+    padding:0;
+}
+.search_box1 button{
+    width:30px;
+    height:30px;
+    background:url(../images/search.png)no-repeat;
+    text-indent:-9999px;
+    border:0 none;
+    position:relative;
+    top:-40px;
+    cursor:pointer;
+    float:right;
+
+}
+.search_box1 input{
+    margin-top:60px;
+    width:100%;
+    height:40px;
+    font-size:14px;
+    box-sizing:border-box;
+    background:#d6c9c1;
+    border:0 none;
+    border-bottom:2px solid#fff;
+    outline:0 none
+}
+.gnb_exit{
+    display:block;
+    width:35px;
+    height:35px;
+    background:url(../images/exit.png)no-repeat;
+    text-indent:-9999px;
+    position:relative;
+    top:-160px;
+    float:right;
+}
+.fixed_menu{
+    position:fixed;
+    border-top:1px solid#a08d7c;
+    background:#fff;
+    left:0;
+    right:0;
+    bottom:0;
+    height:6rem;
+    z-index:100
+}
+.fixed_menu ul{
+    display:flex;
+    justify-content:center;
+    margin-left:35px;
+    margin-right:35px;
+}
+.fixed_menu li{
+    padding:30px 11.5% 30px 11.5%;
+}
+.f_m1{
+    display:block;
+    width:41px;
+    height:33px;
+    background:url(../images/fm_menu.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m2{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/fm_home.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m3{
+    display:block;
+    width:36px;
+    height:30px;
+    background:url(../images/fm_wish.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m4{
+    display:block;
+    width:34px;
+    height:32px;
+    background:url(../images/fm_my.png)no-repeat;
+    text-indent:-9999px;
+}
+/* .search_box1, .gnb_exit,  */.gnb_btn, .cart{
     display:none
 }
 .search{
@@ -65,14 +194,17 @@
     width:450px;
     position:absolute;
     top:130px;
-    right:35px
+    right:35px;
+    /* 숨기기 */
+    display:none
 }
 .search_box2 form{
     width:100%;
     height:210px;
     background:#fff;
     position:relative;
-    z-index:10
+    z-index:10;
+    
 }
 .search_box2 fieldset{
     border:none;
@@ -146,12 +278,12 @@
     font-weight:500;
     text-align:center
 }
-.b_prod ul{
+.b_prod div{
     margin:auto;
     text-align:center;
     display:flex;
 }
-.b_prod li{
+.b_prod p{
     display:inline-block;
     margin:25px;
     width:70%;
@@ -223,12 +355,13 @@
     margin-right:35px;
 }
 .footer{
-    margin-top:50px;
+    margin-top:-50px;
     font-size:14px;
 }
 .f_wrap{
     height:428px;
     background:#ece6e3;
+    position:relative;
 }
 .cs{
     display:none
@@ -236,7 +369,9 @@
 .customer ul{
     color:#9c9a9b;
     padding:25px 0 25px 60px;
-    float:right
+    float:right;
+    margin-top:144px;
+    margin-right:50px;
 }
 .customer li{
     line-height:25px;
@@ -246,24 +381,31 @@
     color:#9c9a9b;
 }
 .f_info{
-    margin-top:30px;
+    clear:both;
+    display:inline-block;
     color:#a08d7c;
-    text-align:center;
-    line-height:20px
+    line-height:20px;
+    position:absolute;
+    margin-top:30px;
+    margin-left:35px;
 }
 .f_info h2{
     width:117px;
     height:83px;
     background:url(../images/f_logo.png)no-repeat;
     text-indent:-9999px;
+
+}
+.f_info1{
     margin-top:30px;
 }
 .f_link{
-    margin-top:30px;
+    position:relative;
+    top:350px;
+    margin-left:35px;
 }
 .f_link ul{
     display:flex;
-    justify-content:center;
 }
 .f_link li a{
     color:#a08d7c;
@@ -271,8 +413,12 @@
 }
 .sns ul{
     display:flex;
-    justify-content:center;
+    float:right;
+    position:relative;
+    top:295px;
+    right:-220px
 }
 .sns li{
     padding:30px 10px;
+    margin-bottom:100px;
 }

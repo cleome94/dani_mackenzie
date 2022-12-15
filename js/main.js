@@ -2,6 +2,9 @@ $(function(){
     $(".gnb_btn").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $(".f_m1").click(function(){
+        $(".gnb_wrap").animate({width:"toggle"}, 200);
+    });
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
@@ -18,6 +21,12 @@ $(function(){
         $(".customer ul").slideToggle("fast");
     });
     $(".cs").click(function(){
+        $(this).toggleClass("on off");
+    });
+    $(".f_info h2").click(function(){
+        $(".f_info div").slideToggle("fast");
+    });
+    $(".comp").click(function(){
         $(this).toggleClass("on off");
     });
 });
