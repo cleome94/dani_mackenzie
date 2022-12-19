@@ -1,0 +1,345 @@
+.header{
+    height:103px;
+    border-top:2px solid#a08d7c;
+    box-sizing:border-box;
+    background:#a08d7c;
+    margin:auto;
+    position:relative
+}
+.logo{
+    width:230px;
+    height:63px;
+    margin:20px auto 0;
+}
+.logo a{
+    display:block;
+    width:230px;
+    height:63px;
+    background:url(../images/m_logo.png)no-repeat;
+    text-indent:-9999px
+}
+.gnb0{
+    display:none
+}
+.gnb_wrap{
+    position:absolute;
+    width:100%;
+    height:2000px;
+    left:0;top:-2px;
+    background:#d6c9c1;
+    z-index:10;
+    /* 숨기기 */
+    display:none
+}
+.gnb_btn{
+    width:40px;
+    height:33px;
+    background:url(../images/menu.png)no-repeat;
+    text-indent:-9999px;
+    position:absolute;
+    left:35px;top:33px;
+}
+.gnb{
+    margin-top:207px;
+    margin-left:35px;
+    margin-right:35px;
+}
+.gnb a{
+    color:#fff
+}
+.menu li{
+    margin-left:53px;
+    font-size:26px;
+    font-weight:500
+}
+#shop_cate a{
+    margin-left:35px;
+    font-size:16px;
+    color:#a08d7c
+}
+.gnb2{
+    margin-top:30px;
+}
+.user_menu{
+    font-size:18px;
+    font-weight:500;
+    margin-top:-600px
+}
+.user_menu li{
+    float:left;
+    margin-right:30px
+}
+.search_box1{
+    clear:both
+}
+.search_box1 fieldset{
+    border:none;
+    padding:0
+}
+.search_box1 button{
+    width:30px;
+    height:30px;
+    background:url(../images/search.png)no-repeat;
+    text-indent:-9999px;
+    border:0 none;
+    position:relative;
+    top:-40px;
+    cursor:pointer;
+    float:right
+}
+.search_box1 input{
+    margin-top:60px;
+    width:100%;
+    height:40px;
+    font-size:14px;
+    box-sizing:border-box;
+    background:#d6c9c1;
+    border:0 none;
+    border-bottom:2px solid#fff;
+    outline:0 none
+}
+.gnb_exit{
+    display:block;
+    width:35px;
+    height:35px;
+    background:url(../images/exit.png)no-repeat;
+    text-indent:-9999px;
+    position:relative;
+    top:-160px;
+    float:right;
+}
+
+.fixed_menu{
+    position:fixed;
+    border-top:1px solid#a08d7c;
+    background:#fff;
+    left:0;
+    right:0;
+    bottom:0;
+    height:6rem;
+    z-index:100
+}
+.fixed_menu ul{
+    display:flex;
+    justify-content:center;
+    margin-left:35px;
+    margin-right:35px;
+}
+.fixed_menu li{
+    padding:30px 11.5% 30px 11.5%;
+}
+.f_m1{
+    display:block;
+    width:41px;
+    height:33px;
+    background:url(../images/fm_menu.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m2{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/fm_home.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m3{
+    display:block;
+    width:36px;
+    height:30px;
+    background:url(../images/fm_wish.png)no-repeat;
+    text-indent:-9999px;
+}
+.f_m4{
+    display:block;
+    width:34px;
+    height:32px;
+    background:url(../images/fm_my.png)no-repeat;
+    text-indent:-9999px;
+}
+.sch_menu{
+    position:relative;
+    top:-50px;
+    float:right;
+}
+.search{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/search.png)no-repeat;
+    text-indent:-9999px;
+    border:0 none;
+    margin-right:30px;
+    float:left;
+}
+.cart{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/m_cart.png)no-repeat;
+    text-indent:-9999px;
+    float:left;
+    margin-right:35px;
+}
+.search_box2{
+    width:100%;
+    margin-top:18px;
+    /* 숨기기 */
+    display:none;
+}
+.search_box2 form{
+    width:100%;
+    height:210px;
+    background:#fff;
+    position: relative;
+    z-index:1;
+    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
+    /* display:none; */
+}
+.search_box2 fieldset{
+    border:none;
+    padding:0;
+    margin-left:60px;
+    margin-right:60px;
+}
+.search_box2 input{
+    width:100%;
+    height:40px;
+    font-size:14px;
+    box-sizing:border-box;
+    border:0 none;
+    border-bottom:2px solid#000;
+    outline:0 none;
+    margin-top:60px;
+
+}
+.search_box2 button{
+    width:30px;
+    height:30px;
+    background:url(../images/search_black.png)no-repeat;
+    text-indent:-9999px;
+    border:0 none;
+    cursor:pointer;
+    float:right;
+    position:relative;
+    top:-35px;
+}
+.popular{
+    margin-top:20px;
+    margin-left:60px;
+}
+.popular p{
+    margin-top:10px;
+}
+.popular a{
+    margin-left:20px;
+}
+.sch_exit{
+    display:block;
+    width:20px;
+    height:20px;
+    background:url(../images/exit_black.png)no-repeat;
+    text-indent:-9999px;
+    background-size:cover;
+    position:absolute;
+    margin-top:-155px;
+    right:35px
+}
+.shop{
+    border-top:1px solid#000
+}
+.shop h2{
+    border-bottom:1px solid#000;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size:30px;
+    font-weight:500;
+    text-align:center
+}
+.shop ul{
+    border-bottom:1px solid#000;
+    font-size:16px;
+    display:flex;
+    justify-content:center;
+    align-content:flex-start;
+    flex-wrap:wrap;
+    overflow:auto;
+}
+.shop li{
+    margin:12px 15px 12px 15px;
+}
+.perfume{
+    clear:both;
+    margin-top:50px;
+    font-size:13px;
+    line-height:20px;
+    margin-left:35px;
+    margin-right:35px
+}
+.perfume img{
+    width:50%;
+}
+.perfume h3{
+    font-size:14px;
+    font-weight:500;
+    margin-top:5px;
+}
+.perfume p{
+    color:#999
+}
+.perfume span{
+    font-size:14px;
+}
+del{
+    color:#999;
+}
+.perfume1{
+    display:flex;
+}
+.p_wish{
+    display:block;
+    width:34px;
+    height:28px;
+    background:url(../images/shop/wish_before.png)no-repeat;
+    text-indent:-9999px;
+    margin-top:12px;
+    margin-left:-85px;
+}
+.p_cart{
+    display:block;
+    width:24px;
+    height:30px;
+    background:url(../images/shop/cart.png)no-repeat;
+    text-indent:-9999px;
+    margin-top:10px;
+    margin-left:15px;
+}
+/* .perfume1_wrap{
+    float: left;
+}
+.perfume2_wrap{
+    float: left;
+}
+.perfume3_wrap{
+    float: left;
+}
+.perfume4_wrap{
+    float: left;
+}
+.perfume5_wrap{
+    float: left;
+}
+.perfume6_wrap{
+    float: left;
+}
+.perfume7_wrap{
+    float: left;
+}
+.perfume8_wrap{
+    float: left;
+}
+.perfume9_wrap{
+    float: left;
+}
+.perfume10_wrap{
+    float: left;
+} */

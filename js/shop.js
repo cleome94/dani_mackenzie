@@ -14,9 +14,6 @@ $(function(){
     $(".sch_exit").click(function(){
         $(".search_box2").slideUp();
     });
-    $('.event ul').bxSlider({
-        auto:true
-    });
     $(".customer h2").click(function(){
         $(".customer ul").slideToggle("fast");
     });
