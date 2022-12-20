@@ -1,25 +1,44 @@
+/* 태블릿 */
 .header{
     height:103px;
     border-top:2px solid#a08d7c;
     box-sizing:border-box;
-    background:#a08d7c;
     margin:auto;
-    position:relative
+    position:relative;
+    z-index:1;
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto 0;
+    width:117px;
+    height:83px;
+    margin:10px auto 0;
 }
 .logo a{
     display:block;
-    width:230px;
-    height:63px;
-    background:url(../images/m_logo.png)no-repeat;
+    width:117px;
+    height:83px;
+    background:url(../images/logo.png)no-repeat;
     text-indent:-9999px
 }
 .gnb0{
-    display:none
+    margin-left:20px;
+    margin-right:20px;
+}
+.gnb0 > ul{
+    display:flex;
+    margin-top:-53px
+}
+.gnb0 ul > li{
+    font-size:16px;
+    font-weight:500;
+}
+.gnb0 a{
+    color:#fff;
+    padding:15px
+}
+.user_menu0{
+    float:right;
+    position:relative;
+    top:35px;
 }
 .gnb_wrap{
     position:absolute;
@@ -30,14 +49,6 @@
     z-index:10;
     /* 숨기기 */
     display:none
-}
-.gnb_btn{
-    width:40px;
-    height:33px;
-    background:url(../images/menu.png)no-repeat;
-    text-indent:-9999px;
-    position:absolute;
-    left:35px;top:33px;
 }
 .gnb{
     margin-top:207px;
@@ -50,12 +61,12 @@
 .menu li{
     margin-left:53px;
     font-size:26px;
-    font-weight:500
+    font-weight:500;
 }
 #shop_cate a{
     margin-left:35px;
     font-size:16px;
-    color:#a08d7c
+    color:#a08d7c;
 }
 .gnb2{
     margin-top:30px;
@@ -63,18 +74,18 @@
 .user_menu{
     font-size:18px;
     font-weight:500;
-    margin-top:-600px
+    margin-top:-600px;
 }
 .user_menu li{
     float:left;
-    margin-right:30px
+    margin-right:30px;
 }
 .search_box1{
     clear:both
 }
 .search_box1 fieldset{
     border:none;
-    padding:0
+    padding:0;
 }
 .search_box1 button{
     width:30px;
@@ -108,7 +119,6 @@
     top:-160px;
     float:right;
 }
-
 .fixed_menu{
     position:fixed;
     border-top:1px solid#a08d7c;
@@ -156,10 +166,8 @@
     background:url(../images/fm_my.png)no-repeat;
     text-indent:-9999px;
 }
-.sch_menu{
-    position:relative;
-    top:-50px;
-    float:right;
+/* .search_box1, .gnb_exit,  */.gnb_btn, .cart{
+    display:none
 }
 .search{
     display:block;
@@ -167,33 +175,25 @@
     height:30px;
     background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
-    border:0 none;
-    margin-right:30px;
-    float:left;
-}
-.cart{
-    display:block;
-    width:30px;
-    height:30px;
-    background:url(../images/m_cart.png)no-repeat;
-    text-indent:-9999px;
-    float:left;
+    float:right;
     margin-right:35px;
+    margin-top:35px;
 }
 .search_box2{
-    width:100%;
-    margin-top:18px;
+    width:450px;
+    position:absolute;
+    top:130px;
+    right:35px;
     /* 숨기기 */
-    display:none;
+    display:none
 }
 .search_box2 form{
     width:100%;
     height:210px;
     background:#fff;
-    position: relative;
-    z-index:1;
-    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
-    /* display:none; */
+    position:relative;
+    z-index:10;
+    
 }
 .search_box2 fieldset{
     border:none;
@@ -210,7 +210,6 @@
     border-bottom:2px solid#000;
     outline:0 none;
     margin-top:60px;
-
 }
 .search_box2 button{
     width:30px;
@@ -221,17 +220,19 @@
     cursor:pointer;
     float:right;
     position:relative;
-    top:-35px;
+    top:-35px
 }
 .popular{
     margin-top:20px;
-    margin-left:60px;
+    margin-left:10px
 }
 .popular p{
-    margin-top:10px;
+    margin-top:5px;
+    margin-left:15px;
 }
 .popular a{
-    margin-left:20px;
+    margin-right:18px;
+    font-size:13px;
 }
 .sch_exit{
     display:block;
@@ -241,140 +242,277 @@
     text-indent:-9999px;
     background-size:cover;
     position:absolute;
-    margin-top:-155px;
-    right:35px
+    margin-top:-175px;
+    right:15px
 }
-.shop{
-    border-top:1px solid#000
+/* 메인 */
+.content{
+    clear:both;
+    width:100%;
+    margin:auto;
+    position: relative;
+    top:-125px
 }
-.shop h2{
-    border-bottom:1px solid#000;
-    padding-top:15px;
-    padding-bottom:15px;
-    font-size:30px;
+.main_image img{
+    width:100%
+}
+.b_prod{
+    background:#ece6e3;
+    margin-top:-5px;
+    margin-bottom:65px;
+}
+.b_prod h3{
+    padding:45px 0 25px 0;
+    font-size:24px;
     font-weight:500;
     text-align:center
 }
-.shop ul{
-    border-bottom:1px solid#000;
-    font-size:16px;
+.b_prod div{
+    margin:auto;
+    text-align:center;
     display:flex;
-    justify-content:center;
-    align-content:flex-start;
-    flex-wrap:wrap;
-    overflow:auto;
 }
-.shop li{
-    margin:12px 15px 12px 15px;
+.b_prod p{
+    display:inline-block;
+    margin:25px;
+    width:70%;
 }
-.perfume{
+.b_prod img{
+    width:100%
+}
+.e_wrap{
+    margin:0 35px 0 35px;
+}
+.e_prod{
     clear:both;
-    width:100%;
-    margin-top:50px;
-    font-size:13px;
-    line-height:20px;
-    margin-left:35px;
-    margin-right:35px;
+    font-size: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+.e_prod ul{
     text-align:center;
 }
-.perfume img{
+.e_prod li{
+    display:inline-block;
+    width:50%;
+}
+.e_prod img{
     width:100%;
 }
-.perfume h3{
-    font-size:14px;
+.e_line{
+    width:100%;
+    height:60px;
+    background:#d6c9c1;
+}
+.event{
+    clear:both;
+    /* width:50%; */
+    text-align:center;
+    margin:0 auto;
+}
+.event_1 img{
+    max-width: 100%;
+    width:100%;
+}
+.event_2 img{
+    max-width: 100%;
+    width:100%
+}
+.b_story1{
+    display:none;
+}
+.b_story2{
+    font-size:20px;
     font-weight:500;
-    margin-top:5px;
+    text-align:right;
+    margin-top:35px;
+    margin-right:35px;
 }
-.perfume p{
-    color:#999
-}
-.perfume span{
+.footer{
+    margin-top:-50px;
     font-size:14px;
 }
-del{
-    color:#999;
+.f_wrap{
+    height:428px;
+    background:#ece6e3;
+    position:relative;
 }
-.perfume1{
+.cs{
+    display:none
+}
+.customer ul{
+    color:#9c9a9b;
+    padding:25px 0 25px 60px;
+    float:right;
+    margin-top:144px;
+    margin-right:50px;
+}
+.customer li{
+    line-height:25px;
+    text-align:center;
+}
+.customer li a{
+    color:#9c9a9b;
+}
+.f_info{
+    clear:both;
+    display:inline-block;
+    color:#a08d7c;
+    line-height:20px;
+    position:absolute;
+    margin-top:30px;
+    margin-left:35px;
+}
+.f_info h2{
+    width:117px;
+    height:83px;
+    background:url(../images/f_logo.png)no-repeat;
+    text-indent:-9999px
+}
+.f_info1{
+    margin-top:30px;
+}
+.f_link{
+    position:relative;
+    top:350px;
+    margin-left:35px;
+}
+.f_link ul{
     display:flex;
 }
-.p_wish{
-    display:block;
-    width:34px;
-    height:28px;
-    background:url(../images/shop/wish_before.png)no-repeat;
-    text-indent:-9999px;
-    margin-top:12px;
-    margin-left:-85px;
-    /* position: relative;
-    top:-295px;
-    left:210px */
+.f_link li a{
+    color:#a08d7c;
+    margin-right:20px;
 }
-.p_cart{
+.sns ul{
+    display:flex;
+    float:right;
+    position:relative;
+    top:295px;
+    right:-220px
+}
+.sns li{
+    padding:30px 10px;
+    margin-bottom:100px;
+}
+@media screen and (max-width:767px){
+    /* 모바일 */
+.header{
+    background:#a08d7c
+}
+.logo{
+    width:230px;
+    height:63px;
+    margin:20px auto 0;
+}
+.logo a{
+    width:230px;
+    height:63px;
+    background:url(../images/m_logo.png)no-repeat
+}
+.gnb0{
+    display:none
+}
+.gnb_btn{
     display:block;
-    width:24px;
+    width:40px;
+    height:33px;
+    background:url(../images/menu.png)no-repeat;
+    text-indent:-9999px;
+    position:absolute;
+    left:35px;top:33px;
+}
+.sch_menu{
+    position:relative;
+    top:-50px;
+    float:right;
+}
+.search{
+    display:block;
+    width:30px;
     height:30px;
-    background:url(../images/shop/cart.png)no-repeat;
+    background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
+    border:0 none;
+    float:left;
+    margin-right:30px;
+    margin-top:0
+}
+.cart{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/m_cart.png)no-repeat;
+    text-indent:-9999px;
+    float:left;
+    margin-right:35px;
+}
+.search_box2{
+    width:100%;
+    margin-top:18px;
+    position:static;
+    /* 숨기기 */
+    display:none;
+}
+.search_box2 form{
+    z-index:1;
+    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
+    /* display:none; */
+}
+.popular{
+    margin-left:60px;
+}
+.popular p{
     margin-top:10px;
-    margin-left:15px;
-    /* position:relative;
-    top:-325px;
-    left:260px */
+    margin-left:0
 }
-.perfume1_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.popular a{
+    margin-right:0;
+    margin-left:20px;
+    font-size:14px
 }
-.perfume2_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.sch_exit{
+    margin-top:-155px;
+    right:35px
 }
-.perfume3_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.content{
+    top:-12px
 }
-.perfume4_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.b_prod div{
+    display:block
 }
-.perfume5_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.bp1_wrap div{
+    display:flex
 }
-.perfume6_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.bp2{
+    display:flex
 }
-.perfume7_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.bp3{
+    display:flex
 }
-.perfume8_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.b_story{
+    height:114px;
+    background:#ece6e3;
 }
-.perfume9_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.b_story1{
+    display:block;
 }
-.perfume10_wrap{
-    float:left;
-    width:40%;
-    display:inline-block;
+.b_story2{
+    display:none
+}
+.b_story p{
+    font-size:20px;
+    font-weight:500;
+    text-align:center;
+    padding:33px 0;
 }
 .footer{
     margin-top:50px;
-    font-size:14px;
-    clear: both;
+}
+.f_wrap{
+    height:auto;
+    background:none;
+    position:static
 }
 .cs{
     display:block;
@@ -405,15 +543,25 @@ del{
     color:#9c9a9b;
     padding:25px 0 25px 60px;
     /* display:none; */
+    float:left;
+    margin:0 0 20px 0
 }
 .customer li{
     line-height:25px;
+    text-align:left
 }
-.customer li a{
-    color:#9c9a9b;
+.f_info{
+    display:block;
+    position:static;
+    margin-top:0;
+    margin-left:0;
 }
 .f_info h2{
     display:block;
+    text-indent:0;
+    width:auto;
+    height:auto;
+    background:transparent;
     position:relative;
     color:#292929;
     font-size:14px;
@@ -439,27 +587,22 @@ del{
     transition:transform 120ms 200ms ease-out;
 }
 .f_info1{
-    margin-top:30px;
-    color:#a08d7c;
-    text-align:center;
-    line-height:20px
+    text-align:center
 }
 .f_link{
+    position:static;
+    top:0;
     margin-top:30px;
+    margin-left:0
 }
 .f_link ul{
-    display:flex;
     justify-content:center;
-}
-.f_link li a{
-    color:#a08d7c;
-    margin-right:20px;
 }
 .sns ul{
-    display:flex;
     justify-content:center;
+    float:none;
+    position:static;
+    top:0;
+    right:0
 }
-.sns li{
-    padding:30px 10px;
-    margin-bottom:100px;
 }
