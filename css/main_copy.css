@@ -372,6 +372,9 @@
 .f_info1{
     margin-top:30px;
 }
+.customer1, .f_info_1{
+    display:none
+}
 .f_link{
     position:relative;
     top:350px;
@@ -514,14 +517,17 @@
     background:none;
     position:static
 }
-.cs{
+.customer, .f_info{
+    display:none
+}
+.cs1{
     display:block;
     position:relative;
     color:#292929;
     font-size:14px;
     margin-left:35px
 }
-.cs::after{
+.cs1::after{
     content:"";
     text-align:center;
     transform:rotate(-180deg);
@@ -539,24 +545,28 @@
     transform:rotate(0deg);
     transition:transform 120ms 200ms ease-out;
 }
-.customer ul{
+.customer1{
+    display:block
+}
+.customer1 ul{
     color:#9c9a9b;
     padding:25px 0 25px 60px;
-    /* display:none; */
-    float:left;
     margin:0 0 20px 0
 }
-.customer li{
+.customer1 li{
     line-height:25px;
     text-align:left
 }
-.f_info{
+.customer1 li a{
+    color:#9c9a9b;
+}
+.f_info_1{
     display:block;
     position:static;
     margin-top:0;
     margin-left:0;
 }
-.f_info h2{
+.f_info_1 h2{
     display:block;
     text-indent:0;
     width:auto;
@@ -568,7 +578,7 @@
     margin-top:30px;
     margin-left:35px
 }
-.comp::after{
+.comp1::after{
     content:"";
     text-align:center;
     transform:rotate(-180deg);
@@ -586,8 +596,11 @@
     transform:rotate(0deg);
     transition:transform 120ms 200ms ease-out;
 }
-.f_info1{
-    text-align:center
+.f_info1_1{
+    margin-top:30px;
+    color:#a08d7c;
+    text-align:center;
+    line-height:20px
 }
 .f_link{
     position:static;
