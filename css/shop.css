@@ -273,17 +273,29 @@
     margin-top:50px;
     font-size:13px;
     line-height:20px;
-    margin-left:35px;
-    margin-right:35px;
+    /* margin-left:35px;
+    margin-right:35px; */
     text-align:center;
 }
-.perfume img{
+/* .perfume img{
     width:100%;
+} */
+.perfume_img{
+    width:100%;
+    cursor:pointer
+}
+.p_wish{
+    width:34px;
+    height:28px;
+    margin-top:12px;
+    margin-left:-85px;
+    cursor:pointer
 }
 .perfume h3{
     font-size:14px;
     font-weight:500;
     margin-top:5px;
+    cursor:pointer
 }
 .perfume p{
     color:#999
@@ -297,18 +309,6 @@ del{
 .perfume1{
     display:flex;
 }
-.p_wish{
-    display:block;
-    width:34px;
-    height:28px;
-    background:url(../images/shop/wish_before.png)no-repeat;
-    text-indent:-9999px;
-    margin-top:12px;
-    margin-left:-85px;
-    /* position: relative;
-    top:-295px;
-    left:210px */
-}
 .p_cart{
     display:block;
     width:24px;
@@ -317,59 +317,67 @@ del{
     text-indent:-9999px;
     margin-top:10px;
     margin-left:15px;
-    /* position:relative;
-    top:-325px;
-    left:260px */
+    cursor:pointer
 }
 .perfume1_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume2_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume3_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume4_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume5_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume6_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume7_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume8_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume9_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .perfume10_wrap{
     float:left;
     width:40%;
     display:inline-block;
+    margin:0 5% 3% 5%;
 }
 .footer{
     margin-top:50px;

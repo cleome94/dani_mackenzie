@@ -17,18 +17,18 @@ $(function(){
     $('.event ul').bxSlider({
         auto:true
     });
-    $(".customer h2").click(function(){
-        $(".customer ul").slideToggle("fast");
+    $(".customer1 h2").click(function(){
+        $(".customer1 ul").slideToggle("fast");
     });
-    $(".cs").click(function(){
+    $(".cs1").click(function(){
         $(this).toggleClass("on off");
     });
-    $(".cs").trigger("click");
-    $(".f_info h2").click(function(){
-        $(".f_info div").slideToggle("fast");
+    $(".cs1").trigger("click");
+    $(".f_info_1 h2").click(function(){
+        $(".f_info_1 div").slideToggle("fast");
     });
-    $(".comp").click(function(){
+    $(".comp1").click(function(){
         $(this).toggleClass("on off");
     });
-    $(".comp").trigger("click");
+    $(".comp1").trigger("click");
 });

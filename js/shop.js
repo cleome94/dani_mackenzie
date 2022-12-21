@@ -14,6 +14,9 @@ $(function(){
     $(".sch_exit").click(function(){
         $(".search_box2").slideUp();
     });
+    /* $(".p_wish").click(function(){
+        $(this).attr("src","../images/shop/wish_after.png");
+    }); */
     $(".customer h2").click(function(){
         $(".customer ul").slideToggle("fast");
     });
@@ -28,4 +31,17 @@ $(function(){
         $(this).toggleClass("on off");
     });
     $(".comp").trigger("click");
+});
+$(function () {
+	
+	let num = 0;
+	$(".p_wish").click(function () {
+		if(num == 0) {
+			$(this).attr("src", "../images/shop/wish_after.png");
+			num = 1;
+		}else {
+			$(this).attr("src", "../images/shop/wish_before.png");
+			num = 0;
+		}
+	});
 });
