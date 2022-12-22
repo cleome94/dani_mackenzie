@@ -32,3 +32,9 @@ $(function(){
     });
     $(".comp1").trigger("click");
 });
+function logout(){
+    var ck = confirm("로그아웃 하시겠습니까?");
+    if(ck){
+      location.href="login/logout.php";
+    };
+  };
