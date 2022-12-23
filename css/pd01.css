@@ -1,0 +1,222 @@
+.back{
+    display:block;
+    width:45px;
+    height:35px;
+    background:url(../images/login/back.png)no-repeat;
+    text-indent:-9999px;
+    margin:40px 0 40px 35px;
+    position:relative
+}
+.menu ul{
+    position:relative;
+    margin-top:-73px;
+    display:flex;
+    justify-content:flex-end;
+    margin-right:35px
+}
+.home{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/login/home.png)no-repeat;
+    text-indent:-9999px;
+    margin-right:30px;
+}
+.search{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/dp/search.png)no-repeat;
+    text-indent:-9999px;
+    margin-right:30px;
+}
+.cart{
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/dp/cart.png)no-repeat;
+    text-indent:-9999px;
+}
+.search_box2{
+    width:100%;
+    border:2px solid#000;
+    box-sizing:border-box;
+    margin-top:18px;
+    /* 숨기기 */
+    display:none;
+}
+.search_box2 form{
+    width:100%;
+    height:210px;
+    background:#fff;
+    position: relative;
+    z-index:1;
+    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
+    /* display:none; */
+}
+.search_box2 fieldset{
+    border:none;
+    padding:0;
+    margin-left:60px;
+    margin-right:60px;
+}
+.search_box2 input{
+    width:100%;
+    height:40px;
+    font-size:14px;
+    box-sizing:border-box;
+    border:0 none;
+    border-bottom:2px solid#000;
+    outline:0 none;
+    margin-top:60px;
+
+}
+.search_box2 button{
+    width:30px;
+    height:30px;
+    background:url(../images/search_black.png)no-repeat;
+    text-indent:-9999px;
+    border:0 none;
+    cursor:pointer;
+    float:right;
+    position:relative;
+    top:-35px;
+}
+.popular{
+    margin-top:20px;
+    margin-left:60px;
+}
+.popular p{
+    margin-top:10px;
+}
+.popular a{
+    margin-left:20px;
+}
+.sch_exit{
+    display:block;
+    width:20px;
+    height:20px;
+    background:url(../images/exit_black.png)no-repeat;
+    text-indent:-9999px;
+    background-size:cover;
+    position:absolute;
+    margin-top:-155px;
+    right:35px
+}
+.cont img{
+    width:100%;
+}
+.content{
+    margin-left:35px;
+    margin-right:35px;
+}
+.d_info ul{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+    margin-bottom:50px;
+    font-size:18px;
+}
+.d_info1{
+    margin-right:189px;
+}
+.d_info2{
+    margin-right:189px;
+}
+.pd_wrap{
+    display:flex
+}
+table{
+    width:50%;
+    font-size:1rem;
+    position:relative;
+    top:-2%;
+    left:2%;
+}
+.pd1 img{
+    width:100%;
+    /* float:left; */
+}
+.pd_table th{
+    text-align:left;
+    font-weight:500;
+    padding:4% 0 4% 0;
+}
+.pd_table td{
+    position:relative;
+    /* left:25px; */
+}
+.cont{
+    clear:both
+}
+/* footer */
+.footer{
+    margin-top:-50px;
+    font-size:14px;
+}
+.f_wrap{
+    height:428px;
+    background:#ece6e3;
+    position:relative;
+}
+.cs{
+    display:none
+}
+.customer ul{
+    color:#9c9a9b;
+    padding:25px 0 25px 60px;
+    float:right;
+    margin-top:144px;
+    margin-right:50px;
+}
+.customer li{
+    line-height:25px;
+    text-align:center;
+}
+.customer li a{
+    color:#9c9a9b;
+}
+.f_info{
+    clear:both;
+    display:inline-block;
+    color:#a08d7c;
+    line-height:20px;
+    position:absolute;
+    margin-top:30px;
+    margin-left:35px;
+}
+.f_info h2{
+    width:117px;
+    height:83px;
+    background:url(../images/f_logo.png)no-repeat;
+    text-indent:-9999px
+}
+.f_info1{
+    margin-top:30px;
+}
+.customer1, .f_info_1{
+    display:none
+}
+.f_link{
+    position:relative;
+    top:350px;
+    margin-left:35px;
+}
+.f_link ul{
+    display:flex;
+}
+.f_link li a{
+    color:#a08d7c;
+    margin-right:20px;
+}
+.sns ul{
+    display:flex;
+    float:right;
+    position:relative;
+    top:295px;
+    right:-220px
+}
+.sns li{
+    padding:30px 10px;
+    margin-bottom:100px;
+}

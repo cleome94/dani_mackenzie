@@ -86,9 +86,9 @@ $total = mysqli_num_rows($result);
                 <?php }; ?>
 
                 <div class="search_box1">
-                    <form name="" action="" method="">
+                    <form name="sch_box1">
                         <fieldset>
-                            <legend class="hide">검색</legend>
+                            <legend class="hide">검색창</legend>
                             <label for="sch_txt" class="hide">입력</label>
                             <input type="text" name="sch_txt" id="sch_txt">
                             <button type="button">검색</button>
@@ -113,9 +113,9 @@ $total = mysqli_num_rows($result);
             <a class="cart" href="#">장바구니</a>
         </div>
         <div class="search_box2">
-            <form name="" action="" method="">
+            <form name="sch_box2">
                 <fieldset>
-                    <legend class="hide">검색</legend>
+                    <legend class="hide">검색창</legend>
                     <label for="sch2_txt" class="hide">입력</label>
                     <input type="text" name="sch2_txt" id="sch2_txt">
                     <button type="button">검색</button>
