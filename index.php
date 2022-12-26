@@ -197,7 +197,7 @@ $total = mysqli_num_rows($result);
 
     <footer id="footer" class="footer">
         <div class="f_wrap">
-            <!-- 템플릿 -->
+            <!-- 태블릿 -->
         <div class="customer">
             <h2 class="cs">고객센터</h2>
             <ul>
