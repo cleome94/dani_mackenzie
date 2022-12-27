@@ -31,10 +31,22 @@ $(function(){
 });
 function qna_check(){
     var n_content = document.getElementById("n_content")
+    var n_answer = document.getElementById("n_answer")
 
     if(!n_content.value){
         alert("내용을 입력하세요.");
         n_content.focus();
         return false;
     };
+    if(!n_answer.value){
+        alert("답변을 입력하세요.");
+        n_answer.focus();
+        return false;
+    };
 };
+function logout(){
+    var ck = confirm("로그아웃 하시겠습니까?");
+    if(ck){
+      location.href="../login/logout.php";
+    };
+  };

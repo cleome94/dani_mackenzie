@@ -4,6 +4,7 @@ body{
 .header{
     height:103px;
     border-top:2px solid#fff;
+    box-shadow:2px 1px 6px 1px gray;
     box-sizing:border-box;
     background:#fff;
     margin:auto;

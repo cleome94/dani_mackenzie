@@ -2,13 +2,14 @@
 include "../inc/session.php";
 $answer = $_POST["answer"];
 $n_content = $_POST["n_content"];
+$n_answer = $_POST["n_answer"];
 $w_date = date("Y-m-d");
 include "../inc/dbcon.php";
 
 $sql = "insert into qna(";
-$sql .= "answer, n_content, writer, w_date";
+$sql .= "answer, writer, n_content, n_answer, w_date";
 $sql .= ") values(";
-$sql .= "'$answer', '$n_content', '$s_name', '$w_date'";
+$sql .= "'$answer', '$s_name', '$n_content', '$n_answer', '$w_date'";
 $sql .= ");";
 
 mysqli_query($dbcon, $sql);

@@ -14,9 +14,6 @@ $(function(){
     $(".sch_exit").click(function(){
         $(".search_box2").slideUp();
     });
-    /* $(".p_wish").click(function(){
-        $(this).attr("src","../images/shop/wish_after.png");
-    }); */
     $(".customer h2").click(function(){
         $(".customer ul").slideToggle("fast");
     });
@@ -32,22 +29,18 @@ $(function(){
     });
     $(".comp").trigger("click");
 });
-$(function () {
-	
-	let num = 0;
-	$(".p_wish").click(function () {
-		if(num == 0) {
-			$(this).attr("src", "../images/shop/wish_after.png");
-			num = 1;
-		}else {
-			$(this).attr("src", "../images/shop/wish_before.png");
-			num = 0;
-		}
-	});
-});
+function qna_check(){
+    var n_content = document.getElementById("n_content")
+
+    if(!n_content.value){
+        alert("내용을 입력하세요.");
+        n_content.focus();
+        return false;
+    };
+};
 function logout(){
     var ck = confirm("로그아웃 하시겠습니까?");
     if(ck){
-      location.href="login/logout.php";
+      location.href="../login/logout.php";
     };
   };

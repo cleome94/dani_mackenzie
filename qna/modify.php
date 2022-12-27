@@ -1,5 +1,11 @@
 <?php
 include "../inc/session.php";
+$n_idx = $_GET["n_idx"];
+include "../inc/dbcon.php";
+$sql = "select * from qna where idx=$n_idx;";
+$result = mysqli_query($dbcon, $sql);
+$array = mysqli_fetch_array($result);
+mysqli_close($dbcon);
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -7,23 +13,23 @@ include "../inc/session.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대니멕켄지 문의하기</title>
+    <title>대니멕켄지 문의 답변하기</title>
     <link rel="stylesheet" type="text/css" href="../css/css_reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/qna_writer.css">
+    <link rel="stylesheet" type="text/css" href="../css/qna_modify.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
-    <script src="../js/writer.js"></script>
+    <script src="../js/write.js"></script>
 </head>
 <body>
     <head class="header">
         <div class="qna">
-            <h2>Q&A 작성</h2>
-            <a href="#"  class="back">뒤로가기</a>
+            <h2>Q&A 답변 작성</h2>
+            <a href="#" class="back" onclick="history.back();">뒤로가기</a>
         </div>
         <div class="gnb_wrap">
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
                 <ul class="menu">
-                    <li><a class="gnb1" href="#">SHOP</a>
+                    <li><a class="gnb1" href="../shop.php">SHOP</a>
                         <ul id="shop_cate">
                             <li><a href="#">Pure Oil Perfume</a></li>
                             <li><a href="#">Perfume Sampler</a></li>
@@ -39,12 +45,21 @@ include "../inc/session.php";
                     <li class="gnb2"><a href="#">Q&A</a></li>
                 </ul>
                 <h2 class="hide">사용자 메뉴</h2>
+                <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
-                    <li><a href="#">LOGIN</a></li>
-                    <li><a href="#">JOIN</a></li>
+                    <li><a href="../login/login.php">LOGIN</a></li>
+                    <li><a href="../members/join.php">JOIN</a></li>
                     <li><a href="#">CART</a></li>
                     <li><a href="#">ORDER</a></li>
                 </ul>
+                <?php } else{ ?>
+                <ul class="user_menu">
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#" onclick="logout()">LOG OUT</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php }; ?>
 
                 <div class="search_box1">
                     <form name="sch_box1">
@@ -63,33 +78,37 @@ include "../inc/session.php";
             <h2 class="hide">편의 메뉴</h2>
             <ul>
                 <li><a href="#" class="f_m1">메뉴 열기</a></li>
-                <li><a href="#" class="f_m2">홈</a></li>
+                <li><a href="../index.php" class="f_m2">홈</a></li>
                 <li><a href="#" class="f_m3">찜 목록</a></li>
                 <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>
         </section>
     </head>
     <main class="content">
-        <form name="qna_form" action="qna_insert.php" method="post" onsubmit="return qna_check()">
+        <form name="qna_form" action="edit.php?n_idx=<?php echo $n_idx; ?>" method="post" onsubmit="return qna_check()">
             <fieldset class="qna_set">
                 <legend class="hide">문의하기</legend>
-                <?php if($s_id == "admin") { ?>
-                <p>
-                    <select name="answer" id="answer" class="answer">
-                        <option value="답변대기">답변대기</option>
-                        <option value="답변완료">답변완료</option>
-                    </select>
-                </p>
-                <?php }; ?>
                 <p class="writer">
                     작성자<span><?php echo $s_name; ?></span>
                 </p>
                 <p><label for="n_content" class="hide">문의 작성</label></p>
-                <p><textarea id="n_content" name="n_content" class="n_content" placeholder="문의사항을 작성해주세요."></textarea></p>
+                <p><textarea id="n_content" name="n_content" class="n_content" placeholder="문의사항을 작성해주세요."><?php echo $array["n_content"]; ?></textarea></p>
 
+                <?php if($s_id == "admin") { ?>
+                <p>
+                    <label for="answer" class="hide">답변상황</label>
+                    <select name="answer" id="answer" class="answer">
+                        <option value="답변대기"<?php if($array["answer"] == "답변대기") echo " selected"; ?>>답변대기</option>
+                        <option value="답변완료"<?php if($array["answer"] == "답변완료") echo " selected"; ?>>답변완료</option>
+                    </select>
+                </p>
+                <p class="writer2"><label for="n_answer">관리자 답변하기</label></p>
+                <p><textarea id="n_answer" name="n_answer" class="n_answer" placeholder="문의사항에 대한 답변을 해주세요."><?php echo $array["n_answer"]; ?></textarea></p>
+                <?php }; ?>
+                
                 <div class="btn">
                     <button class="back_btn" type="button" onclick="history.back()">취소</button>
-                    <button class="ok_btn" type="submit">등록</button>
+                    <button class="ok_btn" type="submit">답변 등록</button>
                 </div>
 
             </fieldset>

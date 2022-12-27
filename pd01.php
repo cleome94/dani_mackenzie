@@ -4,8 +4,8 @@ include "inc/dbcon.php";
 $sql = "select * from qna";
 $result = mysqli_query($dbcon, $sql);
 $array = mysqli_fetch_array($result);
-$list_num = 10;
-$page_num = 3;
+$list_num = 5;
+$page_num = 5;
 $page = isset($_GET["page"])? $_GET["page"] : 1;
 $total_page = ceil($total / $list_num);
 $total_block = ceil($total_page / $page_num);
@@ -30,16 +30,24 @@ if($e_pageNum > $total_page){
     <link rel="stylesheet" type="text/css" href="css/pd01.css">
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/pd01.js"></script>
+    <style>
+        <?php if($s_id == "admin"){ ?>
+            .admin_ans{
+                display:flex;
+                justify-content:right
+            }
+        <?php }; ?>
+    </style>
 </head>
 <body>
     <header id="header" class="header">
         <h1 class="hide">대니멕켄지</h1>
-        <a href="#" class="back">뒤로가기</a>
+        <a href="#" class="back" onclick="history.back();">뒤로가기</a>
         <div class="gnb_wrap">
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
                 <ul class="menu">
-                    <li><a class="gnb1" href="#">SHOP</a>
+                    <li><a class="gnb1" href="shop.php">SHOP</a>
                         <ul id="shop_cate">
                             <li><a href="#">Pure Oil Perfume</a></li>
                             <li><a href="#">Perfume Sampler</a></li>
@@ -55,12 +63,21 @@ if($e_pageNum > $total_page){
                     <li class="gnb2"><a href="#">Q&A</a></li>
                 </ul>
                 <h2 class="hide">사용자 메뉴</h2>
+                <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
-                    <li><a href="#">LOGIN</a></li>
-                    <li><a href="#">JOIN</a></li>
+                    <li><a href="login/login.php">LOGIN</a></li>
+                    <li><a href="members/join.php">JOIN</a></li>
                     <li><a href="#">CART</a></li>
                     <li><a href="#">ORDER</a></li>
                 </ul>
+                <?php } else{ ?>
+                <ul class="user_menu">
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#" onclick="logout()">LOG OUT</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php }; ?>
 
                 <div class="search_box1">
                     <form name="sch_box1">
@@ -79,14 +96,14 @@ if($e_pageNum > $total_page){
             <h2 class="hide">편의 메뉴</h2>
             <ul>
                 <li><a href="#" class="f_m1">메뉴 열기</a></li>
-                <li><a href="#" class="f_m2">홈</a></li>
+                <li><a href="index.php" class="f_m2">홈</a></li>
                 <li><a href="#" class="f_m3">찜 목록</a></li>
                 <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>
         </section>
         <div class="u_menu">
             <h2 class="hide">편의성 메뉴</h2>
-                <a href="#" class="home">홈으로 가기</a>
+                <a href="index.php" class="home">홈으로 가기</a>
                 <a href="#" class="search">검색창 열기</a>
                 <a href="#" class="cart">장바구니</a>
     </div>
@@ -176,6 +193,7 @@ if($e_pageNum > $total_page){
         </section>
     </div>
     <div class="d_2">
+        <h3>상품 구매 안내</h3>
     <p>고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다. </p>
 
     <p>
@@ -223,32 +241,47 @@ if($e_pageNum > $total_page){
         <h3 class="hide">문의</h3>
         <table class="qna">
             <caption class="hide">문의 목록</caption>
+            <button type="button" class="q_btn" onclick="location.href='qna/write.php'">Q&A 작성</button>
             <?php
             $start = ($page -1) * $list_num;
 
             $sql = "select * from qna order by idx desc limit $start, $list_num;";
 
             $result = mysqli_query($dbcon, $sql);
-
-            
-
              while($array = mysqli_fetch_array($result)){
             ?>
-            <tr>
-                <th class="ans"><?php echo $array["answer"]; ?></th>
+            <tr class="ans_line">
+                <th class="ans">
+                    <?php echo $array["answer"]; ?>
+                </th>
             </tr>
-            <tr>
+            <tr class="writer">
                 <th><?php echo $array["writer"]; ?></th>
                 <td><?php echo $array["w_date"]; ?></td>
+                <?php if($s_id == "admin") { ?>
+                <td class="qna_modi">
+                    <a href="qna/modify.php?n_idx=<?php echo $array["idx"]; ?>">[수정]</a>
+                    <a href="#" onclick="remove_notice(<?php echo $array['idx']; ?>)">[삭제]</a>
+                </td>
+                <?php }; ?>
             </tr>
-            <tr class="qna_line">
-                <td><?php echo $array["n_content"]; ?></td>
+            <tr class="qna_line1">
+                <th>문의</th>
+                <td colspan="2">
+                    <?php echo $array["n_content"]; ?>
+                </td>
+            </tr>
+            <tr class="qna_line2">
+                <th>답변</th>
+                <td colspan="2">
+                    <?php echo $array["n_answer"]; ?>
+                </td>
             </tr>
             <?php
                 };
             ?>
             <?php if($s_id == "admin") { ?>
-                <a href="#">답변하기</a>
+                <a href="#" class="admin_ans">답변하기</a>
             <?php }; ?>
         </table>
     </div>

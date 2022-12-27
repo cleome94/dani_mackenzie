@@ -12,12 +12,12 @@
 </head>
 <body>
     <header id="header" class="header">
-            <h1 class="logo"><a href="#">대니멕켄지</a></h1>
+            <h1 class="logo"><a href="../index.php">대니멕켄지</a></h1>
             <div class="back_menu">
                 <h2 class="hide">이전 메뉴</h2>
                 <ul>
                     <li><a href="#" class="back" id="back1" onclick="history.back();">뒤로가기</a></li>
-                    <li><a href="#" class="back" id="back2">뒤로가기</a></li>
+                    <li><a href="#" class="back" id="back2" onclick="history.back();">뒤로가기</a></li>
                     <li><a href="../index.php" class="home">홈으로 가기</a></li>
                 </ul>
             </div>

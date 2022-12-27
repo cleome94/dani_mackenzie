@@ -4,8 +4,7 @@
     right:0;
     left:0;
     background:#fff;
-    border-bottom:1px solid#000;
-    z-index:10;
+    z-index:11;
 }
 .back{
     display:block;
@@ -23,7 +22,7 @@
     height:2000px;
     left:0;top:-2px;
     background:#d6c9c1;
-    z-index:10;
+    z-index:20;
     /* 숨기기 */
     display:none
 }
@@ -67,6 +66,9 @@
 }
 .search_box1{
     clear:both
+}
+.search_box1 form{
+    margin-bottom:0px;
 }
 .search_box1 fieldset{
     border:none;
@@ -185,7 +187,6 @@
 }
 .search_box2{
     width:100%;
-    border:2px solid#000;
     box-sizing:border-box;
     margin-top:18px;
     /* 숨기기 */
@@ -194,11 +195,12 @@
 .search_box2 form{
     width:100%;
     height:210px;
+    box-sizing:border-box;
+    box-shadow:5px 2px 3px;
     background:#fff;
     position: relative;
-    z-index:1;
-    /* 숨기기 아이콘 사라지면 이걸로 바꿔서 jquery 해보기 */
-    /* display:none; */
+    z-index:30;
+    margin-bottom:0;
 }
 .search_box2 fieldset{
     border:none;
@@ -258,24 +260,21 @@
 }
 .d_info{
     position:fixed;
-    top:90px;
+    top:95px;
+    /* margin-top:5px; */
     right:0;
     left:0;
-    background:#fff
+    background:#fff;
+    z-index:10;
+    border-top:1px solid#000;
 }
 .d_info ul{
     display:flex;
-    justify-content:center;
+    justify-content:space-evenly;
     margin-top:30px;
     margin-bottom:30px;
     font-size:18px;
 }
-.d_info li{
-    padding:0 12% 0 12%;
-}
-/* .d_1{
-    display:none;
-} */
 .pd_wrap{
     display:flex;
     margin-top:180px;
@@ -330,31 +329,70 @@ table{
 .d_2{
     margin-top:180px;
     font-size:14px;
+    display:none;
+}
+.d_2 h3{
+    margin-bottom:10px;
 }
 .d_2 p{
     margin-bottom:20px;
 }
 .d_3{
     margin-top:180px;
+    position:relative;
+    z-index:1;
+    display:none;
 }
 .d_3 table{
     width:96%;
+    font-size:14px;
+}
+.q_btn{
+    width:100%;
+    height:40px;
+    background:#7f9601;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:50px;
 }
 .qna th{
     font-size:14px;
     font-weight:500;
+    text-align:right;
 }
-.qna_line{
-    border-bottom:1px solid#999;
+.qna td{
+    padding-left:10px;
 }
-.ans{
+.writer{
+    color:rgb(107, 107, 107);
+}
+.qna_modi{
+    text-align:right;
+}
+.qna_line1{
+    border-bottom:1px solid#aaa;
+}
+.qna_line1 td{
+    padding:20px 0 20px 10px;
+}
+.qna_line2{
+    border-bottom:1px solid#a08d7c;
+}
+.qna_line2 td{
+    padding:20px 0 20px 10px;
+}
+.ans_line th{
     width:70px;
-    background:rgb(250, 118, 42);
+    background:rgb(255, 166, 0);
     border-radius:15px;
     color:#fff;
+    text-align:center;
 }
 .footer{
-    /* margin-top:-50px; */
     font-size:14px;
 }
 .f_wrap{
@@ -430,23 +468,6 @@ table{
 .content{
     margin-left:35px;
     margin-right:35px;
-}
-.d_info{
-    position:fixed;
-    top:90px;
-    right:0;
-    left:0;
-    background:#fff
-}
-.d_info ul{
-    display:flex;
-    justify-content:center;
-    margin-top:30px;
-    margin-bottom:30px;
-    font-size:18px;
-}
-.d_info li{
-    padding:0 12% 0 12%;
 }
 .pd_wrap{
     display:block;
@@ -599,7 +620,10 @@ table{
     margin-left:0
 }
 .f_link ul{
-    justify-content:center;
+    justify-content:space-evenly;
+}
+.f_link li a{
+    margin-right:0px;
 }
 .sns ul{
     justify-content:center;

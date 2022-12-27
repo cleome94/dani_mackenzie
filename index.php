@@ -25,7 +25,7 @@ $total = mysqli_num_rows($result);
         <div class="gnb0">
             <h2 class="hide">주요메뉴</h2>
             <ul class="menu1">
-                <li><a class="gnb01" href="#">SHOP</a></li>
+                <li><a class="gnb01" href="shop.php">SHOP</a></li>
                 <li><a class="gnb02" href="#">STORE</a></li>
                 <li><a class="gnb02" href="#">EVENT</a></li>
                 <li><a class="gnb02" href="#">Q&A</a></li>
@@ -51,7 +51,7 @@ $total = mysqli_num_rows($result);
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
                 <ul class="menu">
-                    <li><a class="gnb1" href="#">SHOP</a>
+                    <li><a class="gnb1" href="shop.php">SHOP</a>
                         <ul id="shop_cate">
                             <li><a href="#">Pure Oil Perfume</a></li>
                             <li><a href="#">Perfume Sampler</a></li>
@@ -103,7 +103,7 @@ $total = mysqli_num_rows($result);
             <h2 class="hide">편의 메뉴</h2>
             <ul>
                 <li><a href="#" class="f_m1">메뉴 열기</a></li>
-                <li><a href="#" class="f_m2">홈</a></li>
+                <li><a href="index.php" class="f_m2">홈</a></li>
                 <li><a href="#" class="f_m3">찜 목록</a></li>
                 <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>

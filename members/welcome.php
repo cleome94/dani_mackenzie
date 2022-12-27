@@ -12,7 +12,7 @@
 </head>
 <body>
     <header id="header" class="header">
-        <h1 class="logo"><a href="#">대니멕켄지</a></h1>
+        <h1 class="logo"><a href="../index.php">대니멕켄지</a></h1>
         <div class="back_menu">
             <h2 class="hide">이전 메뉴</h2>
             <ul>

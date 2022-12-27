@@ -1,3 +1,10 @@
+<?php
+include "inc/session.php";
+include "inc/dbcon.php";
+$sql = "select * from members";
+$result = mysqli_query($dbcon, $sql);
+$total = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,28 +19,37 @@
 </head>
 <body>
     <header id="header" class="header">
-        <h1 class="logo"><a href="#">대니멕켄지</a></h1>
+        <h1 class="logo"><a href="index.php">대니멕켄지</a></h1>
         <div class="gnb0">
             <h2 class="hide">주요메뉴</h2>
             <ul class="menu1">
-                <li><a class="gnb01" href="#">SHOP</a></li>
+                <li><a class="gnb01" href="shop.html">SHOP</a></li>
                 <li><a class="gnb02" href="#">STORE</a></li>
                 <li><a class="gnb02" href="#">EVENT</a></li>
                 <li><a class="gnb02" href="#">Q&A</a></li>
             </ul>
             <h2 class="hide">사용자 메뉴</h2>
-            <ul class="user_menu0">
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="#">JOIN</a></li>
-                <li><a href="#">CART</a></li>
-                <li><a href="#">ORDER</a></li>
-            </ul>
+                <?php if(!$s_idx) { ?>
+                <ul class="user_menu">
+                    <li><a href="login/login.php">LOGIN</a></li>
+                    <li><a href="members/join.php">JOIN</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php } else{ ?>
+                <ul class="user_menu">
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#" onclick="logout()">LOG OUT</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php }; ?>
         </div>
         <div class="gnb_wrap">
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
                 <ul class="menu">
-                    <li><a class="gnb1" href="#">SHOP</a>
+                    <li><a class="gnb1" href="shop.php">SHOP</a>
                         <ul id="shop_cate">
                             <li><a href="#">Pure Oil Perfume</a></li>
                             <li><a href="#">Perfume Sampler</a></li>
@@ -49,12 +65,21 @@
                     <li class="gnb2"><a href="#">Q&A</a></li>
                 </ul>
                 <h2 class="hide">사용자 메뉴</h2>
+                <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
-                    <li><a href="#">LOGIN</a></li>
-                    <li><a href="#">JOIN</a></li>
+                    <li><a href="login/login.php">LOGIN</a></li>
+                    <li><a href="members/join.php">JOIN</a></li>
                     <li><a href="#">CART</a></li>
                     <li><a href="#">ORDER</a></li>
                 </ul>
+                <?php } else{ ?>
+                <ul class="user_menu">
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#" onclick="logout()">LOG OUT</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php }; ?>
 
                 <div class="search_box1">
                     <form name="sch_box1">
@@ -74,7 +99,7 @@
             <h2 class="hide">편의 메뉴</h2>
             <ul>
                 <li><a href="#" class="f_m1">메뉴 열기</a></li>
-                <li><a href="#" class="f_m2">홈</a></li>
+                <li><a href="index.php" class="f_m2">홈</a></li>
                 <li><a href="#" class="f_m3">찜 목록</a></li>
                 <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>
@@ -124,17 +149,12 @@
         <section class="perfume">
             <h2 class="hide">퓨어오일퍼퓸</h2>
             <div class="perfume1_wrap">
-                <!-- <div class="perfume1">
-                    <img src="images/shop/perfume1.jpg" alt="">
-                    <span class="p_wish" id="p_wish">상품 찜하기</span>
-                    <span class="p_cart">장바구니 담기</span>
-                </div> -->
-                <div class="perfume1">
+                <div class="perfume1" onclick="location.href='pd01.php'">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
                     <span class="p_cart">장바구니 담기</span>
                 </div>
-                <h3>[퓨어오일퍼퓸] 씨 모스 (Sea Moss)</h3>
+                <h3><a href="pd01.php">[퓨어오일퍼퓸] 씨 모스 (Sea Moss)</a></h3>
                 <p>발렌시아 오렌지, 세이지, 오크모스 블렌딩</p>
                 <span>￦49,000</span>
                 <del>￦126,000</del>

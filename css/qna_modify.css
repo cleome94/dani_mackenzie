@@ -169,6 +169,26 @@
     border:1px solid#393939;
     margin-bottom:30px
 }
+.answer{
+    width:85px;
+    height:25px;
+    border-radius:5px;
+    border:1px  solid#7f9601;
+    position:relative;
+    top:36px;
+    margin-left:120px
+}
+.writer2{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.n_answer{
+    width:80%;
+    height:300px;
+    border-radius:6px;
+    border:1px solid#393939;
+    margin-bottom:30px
+}
 .btn button{
     width:38%;
     height:40px;
@@ -180,10 +200,11 @@
 }
 .back_btn{
     margin-right:4%;
-    background:#999;
+    background:#a08d7c;
+    color:#fff;
 }
 .ok_btn{
-    background:#292929;
+    background:#7f9601;
     color:#fff;
 }
 /* footer */

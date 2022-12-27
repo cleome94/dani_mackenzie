@@ -8,6 +8,9 @@ $(function(){
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $("#sch_txt").click(function(){
+        $(".search_box1 button").show();
+    });
     $(".search").click(function(){
         $(".search_box2").slideToggle();
     });
