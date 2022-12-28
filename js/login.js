@@ -8,6 +8,9 @@ $(function(){
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $(".gnb1_more, .gnb1").click(function(){
+        $("#shop_cate").slideToggle("fast");
+    });
     $(".search").click(function(){
         $(".search_box2").slideToggle();
     });
@@ -32,3 +35,16 @@ function log_form_check(){
         return false;
     };
 };
+$(function () {
+	
+	let num = 0;
+	$(".gnb1_more, .gnb1").click(function () {
+		if(num == 0) {
+			$(".gnb1_more").attr("src", "../images/shop_more.png");
+			num = 1;
+		}else {
+			$(".gnb1_more").attr("src", "../images/shop_hide.png");
+			num = 0;
+		}
+	});
+});

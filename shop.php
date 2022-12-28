@@ -48,22 +48,6 @@ $total = mysqli_num_rows($result);
         <div class="gnb_wrap">
             <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
-                <ul class="menu">
-                    <li><a class="gnb1" href="shop.php">SHOP</a>
-                        <ul id="shop_cate">
-                            <li><a href="#">Pure Oil Perfume</a></li>
-                            <li><a href="#">Perfume Sampler</a></li>
-                            <li><a href="#">Candles</a></li>
-                            <li><a href="#">Diffuser</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Etc</a></li>
-                            <li><a href="#">Special</a></li>
-                        </ul>
-                    </li>
-                    <li class="gnb2"><a href="#">STORE</a></li>
-                    <li class="gnb2"><a href="#">EVENT</a></li>
-                    <li class="gnb2"><a href="#">Q&A</a></li>
-                </ul>
                 <h2 class="hide">사용자 메뉴</h2>
                 <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
@@ -92,9 +76,27 @@ $total = mysqli_num_rows($result);
                     </form>
                 </div>
                 <a href="#none" class="gnb_exit">메뉴 닫기</a>
+                <ul class="menu">
+                    <li><a class="gnb1" href="#">SHOP</a>
+                        <ul id="shop_cate">
+                            <li><a href="shop.php">all products</a></li>
+                            <li><a href="#">Pure Oil Perfume</a></li>
+                            <li><a href="#">Perfume Sampler</a></li>
+                            <li><a href="#">Candles</a></li>
+                            <li><a href="#">Diffuser</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Etc</a></li>
+                            <li><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb2"><a href="#">STORE</a></li>
+                    <li class="gnb2"><a href="#">EVENT</a></li>
+                    <li class="gnb2"><a href="#">Q&A</a></li>
+                </ul>
+                <img src="images/shop_hide.png" alt="더보기" class="gnb1_more">
             </nav>
         </div>
-        <a href="#none" class="gnb_btn">메뉴 열기</a>
+        <a href="#" class="back" onclick="history.back();">뒤로가기</a>
         <section class="fixed_menu">
             <h2 class="hide">편의 메뉴</h2>
             <ul>
@@ -170,7 +172,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume3_wrap">
+            <div class="perfume1_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -181,7 +183,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume4_wrap">
+            <div class="perfume2_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -192,7 +194,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume5_wrap">
+            <div class="perfume1_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -203,7 +205,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume6_wrap">
+            <div class="perfume2_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -214,7 +216,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume7_wrap">
+            <div class="perfume1_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -225,7 +227,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume8_wrap">
+            <div class="perfume2_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -236,7 +238,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume9_wrap">
+            <div class="perfume1_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
@@ -247,7 +249,7 @@ $total = mysqli_num_rows($result);
                 <span>￦49,000</span>
                 <del>￦126,000</del>
             </div>
-            <div class="perfume10_wrap">
+            <div class="perfume2_wrap">
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">

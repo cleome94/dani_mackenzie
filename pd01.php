@@ -32,9 +32,28 @@ if($e_pageNum > $total_page){
     <script src="js/pd01.js"></script>
     <style>
         <?php if($s_id == "admin"){ ?>
-            .admin_ans{
+            .qna_modi{
                 display:flex;
                 justify-content:right
+            }
+            .qna_modi a{
+                position:relative;
+                top:-38px;
+            }
+            .ans{
+                background:#7f9601;
+                margin-right:10px;
+                border-radius:5px;
+                padding:5px;
+                font-size:14px;
+                color:#fff;
+            }
+            .del{
+                background:#a08d7c;
+                border-radius:5px;
+                padding:5px;
+                font-size:14px;
+                color:#fff;
             }
         <?php }; ?>
     </style>
@@ -44,24 +63,8 @@ if($e_pageNum > $total_page){
         <h1 class="hide">대니멕켄지</h1>
         <a href="#" class="back" onclick="history.back();">뒤로가기</a>
         <div class="gnb_wrap">
-            <nav class="gnb">
+        <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
-                <ul class="menu">
-                    <li><a class="gnb1" href="shop.php">SHOP</a>
-                        <ul id="shop_cate">
-                            <li><a href="#">Pure Oil Perfume</a></li>
-                            <li><a href="#">Perfume Sampler</a></li>
-                            <li><a href="#">Candles</a></li>
-                            <li><a href="#">Diffuser</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Etc</a></li>
-                            <li><a href="#">Special</a></li>
-                        </ul>
-                    </li>
-                    <li class="gnb2"><a href="#">STORE</a></li>
-                    <li class="gnb2"><a href="#">EVENT</a></li>
-                    <li class="gnb2"><a href="#">Q&A</a></li>
-                </ul>
                 <h2 class="hide">사용자 메뉴</h2>
                 <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
@@ -90,6 +93,24 @@ if($e_pageNum > $total_page){
                     </form>
                 </div>
                 <a href="#none" class="gnb_exit">메뉴 닫기</a>
+                <ul class="menu">
+                    <li><a class="gnb1" href="#">SHOP</a>
+                        <ul id="shop_cate">
+                            <li><a href="shop.php">all products</a></li>
+                            <li><a href="#">Pure Oil Perfume</a></li>
+                            <li><a href="#">Perfume Sampler</a></li>
+                            <li><a href="#">Candles</a></li>
+                            <li><a href="#">Diffuser</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Etc</a></li>
+                            <li><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb2"><a href="#">STORE</a></li>
+                    <li class="gnb2"><a href="#">EVENT</a></li>
+                    <li class="gnb2"><a href="#">Q&A</a></li>
+                </ul>
+                <img src="images/shop_hide.png" alt="더보기" class="gnb1_more">
             </nav>
         </div>
         <section class="fixed_menu">
@@ -137,13 +158,13 @@ if($e_pageNum > $total_page){
             <ul>
                 <li><a href="#" class="d_info1">상품설명</a></li>
                 <li><a href="#" class="d_info2">상품구매안내</a></li>
-                <li><a href="#" class="d_info3">문의</a></li>
+                <li><a href="#" class="d_info3">Q&A</a></li>
             </ul>
         </section>
 
     <div class=d_1>
         <div class="pd_wrap">
-            <h3 class="pd1"><img src="images/dp/perfume.png" alt="[퓨어오일퍼퓸] 씨 모스(Sea Moss)"></h3>
+            <h2 class="pd1"><img src="images/dp/perfume.png" alt="[퓨어오일퍼퓸] 씨 모스(Sea Moss)"></h2>
             <table class="pd_table">
                 <caption class="hide">상품</caption>
                 <tr>
@@ -238,9 +259,7 @@ if($e_pageNum > $total_page){
     </p>
     </div>
     <div class="d_3">
-        <h3 class="hide">문의</h3>
-        <table class="qna">
-            <caption class="hide">문의 목록</caption>
+        <h3 class="hide">Q&A</h3>
             <button type="button" class="q_btn" onclick="location.href='qna/write.php'">Q&A 작성</button>
             <?php
             $start = ($page -1) * $list_num;
@@ -250,41 +269,45 @@ if($e_pageNum > $total_page){
             $result = mysqli_query($dbcon, $sql);
              while($array = mysqli_fetch_array($result)){
             ?>
-            <tr class="ans_line">
-                <th class="ans">
-                    <?php echo $array["answer"]; ?>
-                </th>
-            </tr>
-            <tr class="writer">
-                <th><?php echo $array["writer"]; ?></th>
-                <td><?php echo $array["w_date"]; ?></td>
-                <?php if($s_id == "admin") { ?>
-                <td class="qna_modi">
-                    <a href="qna/modify.php?n_idx=<?php echo $array["idx"]; ?>">[수정]</a>
-                    <a href="#" onclick="remove_notice(<?php echo $array['idx']; ?>)">[삭제]</a>
-                </td>
-                <?php }; ?>
-            </tr>
-            <tr class="qna_line1">
-                <th>문의</th>
-                <td colspan="2">
-                    <?php echo $array["n_content"]; ?>
-                </td>
-            </tr>
-            <tr class="qna_line2">
-                <th>답변</th>
-                <td colspan="2">
-                    <?php echo $array["n_answer"]; ?>
-                </td>
-            </tr>
+        <div class="qna">
+            <h3 class="hide">Q&A 목록</h3>
+            <ul>
+                <li>
+                    <h4><?php echo $array["answer"]; ?></h4>
+                    <div class="qna_w">
+                        <p>
+                            <span><?php echo $array["writer"]; ?></span>
+                            <?php echo $array["w_date"]; ?>
+                        </p>
+                    </div>
+                    <div class="quest">
+                        <a href="#none">
+                            <?php echo $array["n_content"]; ?>
+                        </a>
+                    </div>
+                    <div class="qna_more">
+                        <div class="question">
+                            <span>문의</span>
+                            <p><?php echo $array["n_content"]; ?></p>
+                        </div>
+                        <div class="answer">
+                            <span>답변</span>
+                            <p><?php echo $array["n_answer"]; ?></p>
+                        </div>
+                    </div>
+                    <?php if($s_id == "admin") { ?>
+                        <div class="qna_modi">
+                            <a class="ans" href="qna/modify.php?n_idx=<?php echo $array["idx"]; ?>">답변하기</a>
+                            <a class="del" href="#" onclick="remove_qna(<?php echo $array['idx']; ?>)">삭제</a>
+                        </div>
+                    <?php }; ?>
+                </li>
+            </ul>
+        </div>
             <?php
                 };
             ?>
-            <?php if($s_id == "admin") { ?>
-                <a href="#" class="admin_ans">답변하기</a>
-            <?php }; ?>
-        </table>
-    </div>
+        </div>
     </main>
 
     <footer id="footer" class="footer">

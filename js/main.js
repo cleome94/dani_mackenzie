@@ -8,6 +8,9 @@ $(function(){
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $(".gnb1_more, .gnb1").click(function(){
+        $("#shop_cate").slideToggle("fast");
+    });
     $("#sch_txt").click(function(){
         $(".search_box1 button").show();
     });
@@ -34,6 +37,19 @@ $(function(){
         $(this).toggleClass("on off");
     });
     $(".comp1").trigger("click");
+});
+$(function () {
+	
+	let num = 0;
+	$(".gnb1_more, .gnb1").click(function () {
+		if(num == 0) {
+			$(".gnb1_more").attr("src", "images/shop_more.png");
+			num = 1;
+		}else {
+			$(".gnb1_more").attr("src", "images/shop_hide.png");
+			num = 0;
+		}
+	});
 });
 function logout(){
     var ck = confirm("로그아웃 하시겠습니까?");

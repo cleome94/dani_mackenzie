@@ -46,7 +46,7 @@
     height:2000px;
     left:0;top:-2px;
     background:#d6c9c1;
-    z-index:10;
+    z-index:11;
     /* 숨기기 */
     display:none
 }
@@ -58,6 +58,9 @@
 .gnb a{
     color:#fff
 }
+.menu{
+    margin-top:20px;
+}
 .menu li{
     margin-left:53px;
     font-size:26px;
@@ -68,6 +71,13 @@
     font-size:16px;
     color:#a08d7c;
 }
+.gnb1_more{
+    position:absolute;
+    right:40px;
+    top:210px;
+    width:23px;
+    height:24px;
+}
 .gnb2{
     margin-top:30px;
 }
@@ -75,6 +85,11 @@
     font-size:18px;
     font-weight:500;
     margin-top:-600px;
+}
+.user_menu{
+    font-size:18px;
+    font-weight:500;
+    margin-top:-170px
 }
 .user_menu li{
     float:left;
@@ -609,7 +624,10 @@
     margin-left:0
 }
 .f_link ul{
-    justify-content:center;
+    justify-content:space-evenly;
+}
+.f_link li a{
+    margin-right:0px;
 }
 .sns ul{
     justify-content:center;

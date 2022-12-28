@@ -11,7 +11,7 @@ $total = mysqli_num_rows($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(반응형)대니멕켄지 Dani Mackenzie</title>
+    <title>대니멕켄지 Dani Mackenzie</title>
     <link rel="stylesheet" type="text/css" href="css/css_reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
@@ -48,26 +48,8 @@ $total = mysqli_num_rows($result);
             <?php }; ?>
         </div>
         <div class="gnb_wrap">
-            <nav class="gnb">
+        <nav class="gnb">
                 <h2 class="hide">주요메뉴</h2>
-                <ul class="menu">
-                    <li><a class="gnb1" href="shop.php">SHOP</a>
-                        <ul id="shop_cate">
-                            <li><a href="#">Pure Oil Perfume</a></li>
-                            <li><a href="#">Perfume Sampler</a></li>
-                            <li><a href="#">Candles</a></li>
-                            <li><a href="#">Diffuser</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Etc</a></li>
-                            <li><a href="#">Special</a></li>
-                        </ul>
-                    </li>
-                    <!-- <li class="more"><a href="#">더보기</a></li> -->
-
-                    <li class="gnb2"><a href="#">STORE</a></li>
-                    <li class="gnb2"><a href="#">EVENT</a></li>
-                    <li class="gnb2"><a href="#">Q&A</a></li>
-                </ul>
                 <h2 class="hide">사용자 메뉴</h2>
                 <?php if(!$s_idx) { ?>
                 <ul class="user_menu">
@@ -96,6 +78,24 @@ $total = mysqli_num_rows($result);
                     </form>
                 </div>
                 <a href="#none" class="gnb_exit">메뉴 닫기</a>
+                <ul class="menu">
+                    <li><a class="gnb1" href="#">SHOP</a>
+                        <ul id="shop_cate">
+                            <li><a href="shop.php">all products</a></li>
+                            <li><a href="#">Pure Oil Perfume</a></li>
+                            <li><a href="#">Perfume Sampler</a></li>
+                            <li><a href="#">Candles</a></li>
+                            <li><a href="#">Diffuser</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Etc</a></li>
+                            <li><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb2"><a href="#">STORE</a></li>
+                    <li class="gnb2"><a href="#">EVENT</a></li>
+                    <li class="gnb2"><a href="#">Q&A</a></li>
+                </ul>
+                <img src="images/shop_hide.png" alt="더보기" class="gnb1_more">
             </nav>
         </div>
         <a href="#none" class="gnb_btn">메뉴 열기</a>

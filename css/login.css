@@ -49,6 +49,9 @@ body{
 .gnb a{
     color:#fff
 }
+.menu{
+    margin-top:20px;
+}
 .menu li{
     margin-left:53px;
     font-size:26px;
@@ -59,13 +62,20 @@ body{
     font-size:16px;
     color:#a08d7c
 }
+.gnb1_more{
+    position:absolute;
+    right:40px;
+    top:210px;
+    width:23px;
+    height:24px;
+}
 .gnb2{
     margin-top:30px;
 }
 .user_menu{
     font-size:18px;
     font-weight:500;
-    margin-top:-600px
+    margin-top:-170px
 }
 .user_menu li{
     float:left;

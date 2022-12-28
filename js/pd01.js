@@ -8,6 +8,9 @@ $(function(){
     $(".gnb_exit").click(function(){
         $(".gnb_wrap").animate({width:"toggle"}, 200);
     });
+    $(".gnb1_more, .gnb1").click(function(){
+        $("#shop_cate").slideToggle("fast");
+    });
     $(".search").click(function(){
         $(".search_box2").slideToggle();
     });
@@ -29,6 +32,10 @@ $(function(){
         $(".d_2").hide();
         $(".d_3").show();
     });
+    $(".quest").click(function(){
+        $(".qna_more").not($(this).next()).slideUp();
+        $(this).next().slideToggle("fast");
+    });
     $(".customer1 h2").click(function(){
         $(".customer1 ul").slideToggle("fast");
     });
@@ -44,9 +51,28 @@ $(function(){
     });
     $(".comp1").trigger("click");
 });
+$(function () {
+	
+	let num = 0;
+	$(".gnb1_more, .gnb1").click(function () {
+		if(num == 0) {
+			$(".gnb1_more").attr("src", "images/shop_more.png");
+			num = 1;
+		}else {
+			$(".gnb1_more").attr("src", "images/shop_hide.png");
+			num = 0;
+		}
+	});
+});
 function logout(){
     var ck = confirm("로그아웃 하시겠습니까?");
     if(ck){
       location.href="login/logout.php";
     };
   };
+function remove_qna(g_no){
+    var ck = confirm("정말 삭제하시겠습니까?");
+    if(ck){
+        location.href="qna/delete.php?n_idx="+g_no;
+    };
+};

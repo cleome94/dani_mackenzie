@@ -22,60 +22,62 @@ $total = mysqli_num_rows($result);
         <h1 class="logo"><a href="../index.php">대니멕켄지</a></h1>
         <a href="#" class="back" onclick="history.back();">뒤로가기</a>
         <div class="gnb_wrap">
-            <nav class="gnb">
-                    <h2 class="hide">주요메뉴</h2>
-                    <ul class="menu">
-                        <li><a class="gnb1" href="shop.php">SHOP</a>
-                            <ul id="shop_cate">
-                                <li><a href="#">Pure Oil Perfume</a></li>
-                                <li><a href="#">Perfume Sampler</a></li>
-                                <li><a href="#">Candles</a></li>
-                                <li><a href="#">Diffuser</a></li>
-                                <li><a href="#">Accessories</a></li>
-                                <li><a href="#">Etc</a></li>
-                                <li><a href="#">Special</a></li>
-                            </ul>
-                        </li>
-                        <li class="gnb2"><a href="#">STORE</a></li>
-                        <li class="gnb2"><a href="#">EVENT</a></li>
-                        <li class="gnb2"><a href="#">Q&A</a></li>
-                    </ul>
-                    <h2 class="hide">사용자 메뉴</h2>
-                    <?php if(!$s_idx) { ?>
-                    <ul class="user_menu">
-                        <li><a href="login/login.php">LOGIN</a></li>
-                        <li><a href="members/join.php">JOIN</a></li>
-                        <li><a href="#">CART</a></li>
-                        <li><a href="#">ORDER</a></li>
-                    </ul>
-                    <?php } else{ ?>
-                    <ul class="user_menu">
-                        <li><a href="#">MY PAGE</a></li>
-                        <li><a href="#" onclick="logout()">LOG OUT</a></li>
-                        <li><a href="#">CART</a></li>
-                        <li><a href="#">ORDER</a></li>
-                    </ul>
-                    <?php }; ?>
+        <nav class="gnb">
+                <h2 class="hide">주요메뉴</h2>
+                <h2 class="hide">사용자 메뉴</h2>
+                <?php if(!$s_idx) { ?>
+                <ul class="user_menu">
+                    <li><a href="login.php">LOGIN</a></li>
+                    <li><a href="../members/join.php">JOIN</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php } else{ ?>
+                <ul class="user_menu">
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#" onclick="logout()">LOG OUT</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <?php }; ?>
 
-                    <div class="search_box1">
-                        <form name="sch_box1">
-                            <fieldset>
-                                <legend class="hide">검색창</legend>
-                                <label for="sch_txt" class="hide">입력</label>
-                                <input type="text" name="sch_txt" id="sch_txt">
-                                <button type="button">검색</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <a href="#none" class="gnb_exit">메뉴 닫기</a>
-                </nav>
+                <div class="search_box1">
+                    <form name="sch_box1">
+                        <fieldset>
+                            <legend class="hide">검색창</legend>
+                            <label for="sch_txt" class="hide">입력</label>
+                            <input type="text" name="sch_txt" id="sch_txt">
+                            <button type="button">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <a href="#none" class="gnb_exit">메뉴 닫기</a>
+                <ul class="menu">
+                    <li><a class="gnb1" href="#">SHOP</a>
+                        <ul id="shop_cate">
+                            <li><a href="../shop.php">all products</a></li>
+                            <li><a href="#">Pure Oil Perfume</a></li>
+                            <li><a href="#">Perfume Sampler</a></li>
+                            <li><a href="#">Candles</a></li>
+                            <li><a href="#">Diffuser</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Etc</a></li>
+                            <li><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb2"><a href="#">STORE</a></li>
+                    <li class="gnb2"><a href="#">EVENT</a></li>
+                    <li class="gnb2"><a href="#">Q&A</a></li>
+                </ul>
+                <img src="../images/shop_hide.png" alt="더보기" class="gnb1_more">
+            </nav>
             </div>
         </div>
         <section class="fixed_menu">
             <h2 class="hide">편의 메뉴</h2>
             <ul>
                 <li><a href="#" class="f_m1">메뉴 열기</a></li>
-                <li><a href="index.php" class="f_m2">홈</a></li>
+                <li><a href="../index.php" class="f_m2">홈</a></li>
                 <li><a href="#" class="f_m3">찜 목록</a></li>
                 <li><a href="#" class="f_m4">마이페이지</a></li>
             </ul>
