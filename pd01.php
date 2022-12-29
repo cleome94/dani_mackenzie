@@ -57,6 +57,16 @@ if($e_pageNum > $total_page){
             }
         <?php }; ?>
     </style>
+    <script>
+        var arr_ans = <?php echo $array["answer"]; ?>
+
+        var data = $(arr_ans);
+        if(value = '답변대기'){
+            data.css("background","#aaa");
+        }else{
+            data.css("background", "#ffba00");
+        }
+    </script>
 </head>
 <body>
     <header id="header" class="header">
@@ -273,7 +283,10 @@ if($e_pageNum > $total_page){
             <h3 class="hide">Q&A 목록</h3>
             <ul>
                 <li>
-                    <h4><?php echo $array["answer"]; ?></h4>
+                    <!-- <h4><?php echo $array["answer"]; ?></h4> -->
+                    <h4 <?php if($array["answer"] == '답변대기'):?>style="background-color:#aaa;"<?php elseif($array["answer"] == '답변완료'):?>style="background-color:rgb(255, 166, 0);"<?php endif?>>
+                        <?php echo $array["answer"]; ?>
+                    </h4>
                     <div class="qna_w">
                         <p>
                             <span><?php echo $array["writer"]; ?></span>
@@ -308,8 +321,13 @@ if($e_pageNum > $total_page){
                 };
             ?>
         </div>
+        <div class="topbtn">
+            <a href="#" id="toTop">
+                <span id="toTopHover"><img src="images/top_btn.png" alt="상단으로 이동"></span>
+            </a>
+        </div>
     </main>
-
+    
     <footer id="footer" class="footer">
         <div class="f_wrap">
             <!-- 태블릿 -->

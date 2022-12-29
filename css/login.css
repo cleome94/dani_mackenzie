@@ -11,14 +11,14 @@ body{
     position:relative
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto
+    width:150px;
+    height:41px;
+    margin:31px auto 0;
 }
 .logo a{
     display:block;
-    width:230px;
-    height:63px;
+    width:150px;
+    height:41px;
     background:url(../images/login/logo.png)no-repeat;
     text-indent:-9999px
 }
@@ -28,7 +28,7 @@ body{
     height:35px;
     background:url(../images/login/back.png)no-repeat;
     text-indent:-9999px;
-    margin-top:-68px;
+    margin-top:-40px;
     margin-left:35px;
 }
 .gnb_wrap{
@@ -122,7 +122,7 @@ body{
 }
 .fixed_menu{
     position:fixed;
-    border-top:1px solid#a08d7c;
+    border-top:1px solid#393939;
     background:#fff;
     left:0;
     right:0;
@@ -141,30 +141,30 @@ body{
 }
 .f_m1{
     display:block;
-    width:41px;
+    width:40px;
     height:33px;
-    background:url(../images/fm_menu.png)no-repeat;
+    background:url(../images/login/fm_menu.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m2{
     display:block;
     width:30px;
     height:30px;
-    background:url(../images/fm_home.png)no-repeat;
+    background:url(../images/login/fm_home.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m3{
     display:block;
     width:36px;
     height:30px;
-    background:url(../images/fm_wish.png)no-repeat;
+    background:url(../images/login/fm_wish.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m4{
     display:block;
     width:34px;
     height:32px;
-    background:url(../images/fm_my.png)no-repeat;
+    background:url(../images/login/fm_my.png)no-repeat;
     text-indent:-9999px;
 }
 .login{
@@ -179,7 +179,14 @@ body{
 .login p{
     margin-bottom:30px
 }
+.join{
+    float:right;
+    margin-top:-120px;
+    margin-right:35px;
+    font-size:14px;
+}
 .log_form{
+    clear:both;
     margin-left:35px;
     margin-right:35px
 }

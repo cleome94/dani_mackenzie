@@ -86,6 +86,7 @@ $total = mysqli_num_rows($result);
     <main id="content" class="content">
         <div class="login">
             <h2>로그인</h2>
+            <a href="../members/join.php" class="join">회원가입</a>
             <form class="log_form" action="login_ok.php" method="post" onsubmit="return log_form_check()">
                 <fieldset>
                     <legend class="hide">로그인 정보</legend>

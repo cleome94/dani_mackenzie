@@ -1,0 +1,58 @@
+데이터베이스명 : dani_mackenzie
+
+
+회원가입
+
+* 테이블 생성 : members;
+create table members(
+	idx int auto_increment primary key,
+	u_id varchar(20) not null,
+	pwd varchar(20) not null,
+	u_name varchar(20) not null,
+	birth date,
+	phone varchar(15),
+	reg_date datetime
+);
+
+insert into members(
+	u_id, pwd, u_name, birth, phone, reg_date
+)values(
+	'admin', '1234', '관리자', '20221222', '01011112222', '2022-12-22'
+);
+
+insert into members(
+	u_id, pwd, u_name, birth, phone, reg_date
+)values(
+	'kim2', '123123', '김태연', '20221222', '01011113333', '2022-12-22'
+);
+
+insert into members(
+	u_id, pwd, u_name, birth, phone, reg_date
+)values(
+	'hong', '111111', '홍길동', '20221222', '01022225555', '2022-12-22'
+);
+========================================================
+
+문의
+
+* 테이블 생성 : qna
+create table qna(
+	idx int auto_increment primary key,
+	answer char(8) not null,
+	writer varchar(20) not null,
+	n_content text not null,
+	n_answer text not null,
+	w_date date
+);
+
+insert into qna(
+	answer, writer, n_content, n_answer, w_date
+)values(
+	'답변완료', '김태연', '상품 발송 언제 가능 한가요?', '12월 25일 이후 순차배송 예정입니다.', '2022-12-22'
+);
+
+insert into qna(
+	answer, writer, n_content, n_answer, w_date
+)values(
+	'답변대기', '홍길동', '선물 포장도 가능한가요?', '', '2022-12-23'
+);

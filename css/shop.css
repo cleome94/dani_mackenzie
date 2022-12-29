@@ -10,16 +10,12 @@
     left:0;
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto 0;
+    width:150px;
+    height:41px;
+    margin:31px auto 0;
 }
 .logo a{
-    display:block;
-    width:230px;
-    height:63px;
-    background:url(../images/m_logo.png)no-repeat;
-    text-indent:-9999px
+    width:100%
 }
 .gnb0{
     display:none
@@ -170,7 +166,7 @@
 }
 .sch_menu{
     position:relative;
-    top:-50px;
+    top:-37px;
     float:right;
 }
 .search{
@@ -239,14 +235,14 @@
     top:-35px;
 }
 .popular{
-    margin-top:20px;
-    margin-left:60px;
+    margin-top:20px
 }
 .popular p{
     margin-top:10px;
 }
 .popular a{
     margin-left:20px;
+    font-size:13px;
 }
 .sch_exit{
     display:block;
@@ -326,11 +322,8 @@ del{
     display:flex;
 }
 .p_cart{
-    display:block;
     width:24px;
     height:30px;
-    background:url(../images/shop/cart.png)no-repeat;
-    text-indent:-9999px;
     margin-top:10px;
     margin-left:15px;
     cursor:pointer
@@ -346,6 +339,20 @@ del{
     width:40%;
     display:inline-block;
     margin:0 5% 3% 5%;
+}
+.topbtn #toTop{
+    display:block;
+    position:fixed;
+    bottom:140px;
+    right:5%;
+    overflow:hidden;
+    z-index: 20;
+}
+#toTop{
+    transition:all 0.3s ease-out;
+}
+#toTop:hover{
+    transform:translateY(-5px);
 }
 .footer{
     margin-top:50px;
@@ -437,4 +444,20 @@ del{
 .sns li{
     padding:30px 10px;
     margin-bottom:100px;
+}
+@media screen and (max-width:767px){
+    .p_wish{
+        width:17px;
+        height:14px;
+        margin-top:12px;
+        margin-left:-55px;
+    }
+    .p_cart{
+        margin-top:12px;
+        margin-left:5px;
+    }
+    .p_cart img{
+        width:12px;
+        height:15px;
+    }
 }

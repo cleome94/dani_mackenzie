@@ -289,11 +289,10 @@
 }
 .f_link ul{
     display:flex;
-    justify-content:center;
+    justify-content:space-evenly;
 }
 .f_link li a{
     color:#a08d7c;
-    margin-right:20px;
 }
 .sns ul{
     display:flex;

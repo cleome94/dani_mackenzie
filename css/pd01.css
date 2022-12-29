@@ -118,7 +118,7 @@
 }
 .fixed_menu{
     position:fixed;
-    border-top:1px solid#a08d7c;
+    border-top:1px solid#393939;
     background:#fff;
     left:0;
     right:0;
@@ -137,30 +137,30 @@
 }
 .f_m1{
     display:block;
-    width:41px;
+    width:40px;
     height:33px;
-    background:url(../images/fm_menu.png)no-repeat;
+    background:url(../images/login/fm_menu.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m2{
     display:block;
     width:30px;
     height:30px;
-    background:url(../images/fm_home.png)no-repeat;
+    background:url(../images/login/fm_home.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m3{
     display:block;
     width:36px;
     height:30px;
-    background:url(../images/fm_wish.png)no-repeat;
+    background:url(../images/login/fm_wish.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m4{
     display:block;
     width:34px;
     height:32px;
-    background:url(../images/fm_my.png)no-repeat;
+    background:url(../images/login/fm_my.png)no-repeat;
     text-indent:-9999px;
 }
 .u_menu{
@@ -250,6 +250,7 @@
 }
 .popular a{
     margin-left:20px;
+    font-size:14px
 }
 .sch_exit{
     display:block;
@@ -387,7 +388,7 @@ table{
 }
 .qna ul h4{
     width:70px;
-    background:rgb(255, 166, 0);
+    /* background:rgb(255, 166, 0); */
     border-radius:15px;
     font-size:14px;
     font-weight:500;
@@ -440,6 +441,20 @@ table{
     font-weight:500;
     line-height:30px;
 }
+.topbtn #toTop{
+    display:block;
+    position:fixed;
+    bottom:140px;
+    right:5%;
+    overflow:hidden;
+    z-index: 20;
+}
+#toTop{
+    transition:all 0.3s ease-out;
+}
+#toTop:hover{
+    transform:translateY(-5px);
+}
 .footer{
     margin-top:50px;
     font-size:14px;
@@ -456,7 +471,7 @@ table{
     color:#9c9a9b;
     padding:25px 0 25px 60px;
     float:right;
-    margin-top:144px;
+    margin-top:90px;
     margin-right:50px;
 }
 .customer li{
@@ -503,14 +518,21 @@ table{
     display:flex;
     float:right;
     position:relative;
-    top:295px;
-    right:-220px
+    margin-top:230px;
+    right:-220px;
+    margin-bottom:70px;
 }
 .sns li{
     padding:30px 10px;
     margin-bottom:100px;
 }
 @media screen and (max-width:767px){
+.popular{
+    margin-left:0px;
+}
+.popular a{
+    margin-right:0;
+}
 .cont img{
     width:100%;
 }
@@ -677,7 +699,8 @@ table{
     justify-content:center;
     float:none;
     position:static;
-    top:0;
-    right:0
+    margin-top:0;
+    right:0;
+    margin-bottom:0;
 }
 }

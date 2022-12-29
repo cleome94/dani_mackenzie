@@ -19,7 +19,7 @@ $total = mysqli_num_rows($result);
 </head>
 <body>
     <header id="header" class="header">
-        <h1 class="logo"><a href="index.php">대니멕켄지</a></h1>
+        <h1 class="logo"><a href="index.php"><img src="images/m_logo.png" alt="대니멕켄지"></a></h1>
         <div class="gnb0">
             <h2 class="hide">주요메뉴</h2>
             <ul class="menu1">
@@ -154,7 +154,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1" onclick="location.href='pd01.php'">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3><a href="pd01.php">[퓨어오일퍼퓸] 씨 모스 (Sea Moss)</a></h3>
                 <p>발렌시아 오렌지, 세이지, 오크모스 블렌딩</p>
@@ -165,7 +165,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 밤쉘 (Bomshell)</h3>
                 <p>피오니, 바닐라 꽃, 보라색 과일 열매 블렌딩</p>
@@ -176,7 +176,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 블루 문 로터스 (Blue Moon Lotus)</h3>
                 <p>호주 북부 지역의 연꽃, 이태리 버가못 블렌딩</p>
@@ -187,7 +187,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 블루세이지 & 씨솔트 (Blue Sage & Sea Salt)</h3>
                 <p>블루 세이지 허브, 라구나 비치의 바다소금을 블렌딩</p>
@@ -198,7 +198,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 라일락 (Lilac)</h3>
                 <p>미국 아이오와주 북부 라일락 블렌딩</p>
@@ -209,7 +209,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 브레아 (Brea)</h3>
                 <p>바다이끼, 아이리스, 프리지아 플로럴 오일 블렌딩</p>
@@ -220,7 +220,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 오하이 가든 (Ojai Garden)</h3>
                 <p>캘리포니아 올리브, 데이지, 오크모스 블렌딩</p>
@@ -231,7 +231,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 유칼립투스 라벤더 (Eucalyptus Lavender)</h3>
                 <p>유칼립투스 나무 오일, 불가리아 오일 블렌딩</p>
@@ -242,7 +242,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 서든 자스민 (Southern jasmine)</h3>
                 <p>플로리다 자스민, 아카시아 블렌딩</p>
@@ -253,7 +253,7 @@ $total = mysqli_num_rows($result);
                 <div class="perfume1">
                     <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
-                    <span class="p_cart">장바구니 담기</span>
+                    <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>
                 <h3>[퓨어오일퍼퓸] 칼라브리아 버가못 (Calabria Bergamot)</h3>
                 <p>칼라브리아 해안가의 버가못, 세이지 허브 블렌딩</p>
@@ -261,6 +261,11 @@ $total = mysqli_num_rows($result);
                 <del>￦126,000</del>
             </div>
         </section>
+        <div class="topbtn">
+            <a href="#" id="toTop">
+                <span id="toTopHover"><img src="images/top_btn.png" alt="상단으로 이동"></span>
+            </a>
+        </div>
     </main>
     <footer id="footer" class="footer">
         <div class="customer">

@@ -343,6 +343,20 @@
     margin-top:35px;
     margin-right:35px;
 }
+.topbtn #toTop{
+    display:block;
+    position:fixed;
+    bottom:120px;
+    right:35px;
+    overflow:hidden;
+    z-index: 20;
+}
+#toTop{
+    transition:all 0.3s ease-out;
+}
+#toTop:hover{
+    transform:translateY(-5px);
+}
 .footer{
     margin-top:-50px;
     font-size:14px;
@@ -359,7 +373,7 @@
     color:#9c9a9b;
     padding:25px 0 25px 60px;
     float:right;
-    margin-top:144px;
+    margin-top:90px;
     margin-right:50px;
 }
 .customer li{
@@ -393,7 +407,7 @@
 .f_link{
     position:relative;
     top:350px;
-    margin-left:35px;
+    margin-left:35px
 }
 .f_link ul{
     display:flex;
@@ -406,8 +420,9 @@
     display:flex;
     float:right;
     position:relative;
-    top:295px;
-    right:-220px
+    margin-top:230px;
+    right:-220px;
+    margin-bottom:70px;
 }
 .sns li{
     padding:30px 10px;
@@ -419,13 +434,12 @@
     background:#a08d7c
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto 0;
+    width:150px;
+    height:41px;
+    margin:31px auto 0;
 }
 .logo a{
-    width:230px;
-    height:63px;
+    width:100%;
     background:url(../images/m_logo.png)no-repeat
 }
 .gnb0{
@@ -442,7 +456,7 @@
 }
 .sch_menu{
     position:relative;
-    top:-50px;
+    top:-37px;
     float:right;
 }
 .search{
@@ -478,7 +492,7 @@
     /* display:none; */
 }
 .popular{
-    margin-left:60px;
+    margin-left:0px;
 }
 .popular p{
     margin-top:10px;
@@ -633,7 +647,8 @@
     justify-content:center;
     float:none;
     position:static;
-    top:0;
-    right:0
+    margin-top:0;
+    right:0;
+    margin-bottom:0;
 }
 }

@@ -50,6 +50,21 @@ $(function(){
         $(this).toggleClass("on off");
     });
     $(".comp1").trigger("click");
+    $('.topbtn').click(function(){
+        $('html,body').stop().animate({"scrollTop":0},1400);
+      });  
+    
+     $('.topbtn').css('display','none');  
+    $(window).on("scroll",function(){ 
+        var ht = $(window).height();
+        var scroll = $(window).scrollTop();
+
+        if(scroll>=1000){
+            $('.topbtn').fadeIn('slow');
+        }else{
+            $('.topbtn').fadeOut('slow');
+        }
+      }); 
 });
 $(function () {
 	

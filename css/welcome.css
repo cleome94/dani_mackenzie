@@ -4,26 +4,27 @@ body{
 .header{
     height:103px;
     border-top:2px solid#fff;
+    box-shadow:2px 1px 6px 1px gray;
     box-sizing:border-box;
     background:#fff;
     margin:auto;
     position:relative
 }
 .logo{
-    width:230px;
-    height:63px;
-    margin:20px auto
+    width:150px;
+    height:41px;
+    margin:31px auto 0;
 }
 .logo a{
     display:block;
-    width:230px;
-    height:63px;
+    width:150px;
+    height:41px;
     background:url(../images/login/logo.png)no-repeat;
     text-indent:-9999px
 }
 .back_menu ul{
     display:flex;
-    margin-top:-68px;
+    margin-top:-40px;
     margin-left:35px;
 }
 .back{
