@@ -12,6 +12,7 @@ $total = mysqli_num_rows($result);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대니멕켄지 로그인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/css_reset.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
     <script src="../js/jquery-3.6.1.min.js"></script>
@@ -69,7 +70,7 @@ $total = mysqli_num_rows($result);
                     <li class="gnb2"><a href="#">EVENT</a></li>
                     <li class="gnb2"><a href="#">Q&A</a></li>
                 </ul>
-                <img src="../images/shop_hide.png" alt="더보기" class="gnb1_more">
+                <a href="#none"><img src="../images/shop_more.png" alt="더보기" class="gnb1_more"></a>
             </nav>
             </div>
         </div>

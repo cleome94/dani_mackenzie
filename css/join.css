@@ -2,7 +2,7 @@ body{
     color:#393939;
 }
 .header{
-    height:103px;
+    height:70px;
     border-top:2px solid#fff;
     box-shadow:2px 1px 6px 1px gray;
     box-sizing:border-box;
@@ -13,37 +13,40 @@ body{
 .logo{
     width:150px;
     height:41px;
-    margin:31px auto 0;
+    margin:15px auto 0;
 }
 .logo a{
     display:block;
     width:150px;
     height:41px;
     background:url(../images/login/logo.png)no-repeat;
-    text-indent:-9999px
+    text-indent:-9999px;
+    position:relative;
+    z-index:1;
 }
 .back_menu ul{
     display:flex;
-    margin-top:-40px;
-    margin-left:35px;
+    margin-top:-37px;
+    margin-left:3%
 }
 .back{
     display:block;
-    width:45px;
-    height:35px;
+    width:32px;
+    height:25px;
     background:url(../images/login/back.png)no-repeat;
     text-indent:-9999px;
-    margin-right:30px;
 }
 .home{
     display:block;
     width:30px;
     height:30px;
     background:url(../images/login/home.png)no-repeat;
-    text-indent:-9999px
+    text-indent:-9999px;
+    position:absolute;
+    margin-left:5%;
 }
 .join{
-    margin-top:80px
+    margin-top:60px
 }
 .join h2{
     font-size:20px;
@@ -69,6 +72,7 @@ body{
     font-weight:500;
     color:#aaa;
     margin-bottom:30px;
+    text-align:center;
 }
 .join1 input{
     width:18px;

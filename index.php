@@ -12,6 +12,7 @@ $total = mysqli_num_rows($result);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대니멕켄지 Dani Mackenzie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/css_reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
@@ -95,7 +96,7 @@ $total = mysqli_num_rows($result);
                     <li class="gnb2"><a href="#">EVENT</a></li>
                     <li class="gnb2"><a href="#">Q&A</a></li>
                 </ul>
-                <img src="images/shop_hide.png" alt="더보기" class="gnb1_more">
+                <a href="#none"><img src="images/shop_more.png" alt="더보기" class="gnb1_more"></a>
             </nav>
         </div>
         <a href="#none" class="gnb_btn">메뉴 열기</a>
@@ -140,7 +141,7 @@ $total = mysqli_num_rows($result);
     <main id="content" class="content">
         <div class="main_image">
         <h2 class="hide">주요소식</h2>
-        <a href="#"><img src="images/main_image01.jpg" alt="Have a peaceful and abundant Christmas.
+        <a href="#"><img src="images/main_image02.png" alt="Have a peaceful and abundant Christmas.
         May all your dreams for the coming year be fulfilled."></a>
 
         </div>
@@ -150,7 +151,7 @@ $total = mysqli_num_rows($result);
             <h3 class="bp">Best Products</h3>
             <div class="bp1_wrap">
                 <div class="bp2">
-                    <p><a href="#" class="bp_1"><img src="images/bp01.jpg" alt="PURE OIL PERFUME"></a></p>
+                    <p><a href="shop.php" class="bp_1"><img src="images/bp01.jpg" alt="PURE OIL PERFUME"></a></p>
                     <p><a href="#" class="bp_2"><img src="images/bp02.jpg" alt="DIFFUSER"></a></p>
                 </div>
                 <div class="bp3">

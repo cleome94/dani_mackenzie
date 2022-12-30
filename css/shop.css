@@ -1,21 +1,28 @@
 .header{
-    height:103px;
-    border-top:2px solid#a08d7c;
+    height:70px;
+    border-top:2px solid#393939;
     box-sizing:border-box;
-    background:#a08d7c;
+    background:#393939;
     margin:auto;
     position:fixed;
     top:0;
     right:0;
     left:0;
+    z-index:1;
 }
 .logo{
     width:150px;
     height:41px;
-    margin:31px auto 0;
+    margin:15px auto 0;
 }
 .logo a{
-    width:100%
+    display:block;
+    width:150px;
+    height:41px;
+    background:url(../images/m_logo.png)no-repeat;
+    text-indent:-9999px;
+    position:relative;
+    z-index:1;
 }
 .gnb0{
     display:none
@@ -25,23 +32,24 @@
     width:100%;
     height:2000px;
     left:0;top:-2px;
-    background:#d6c9c1;
+    background:#393939;
     z-index:10;
     /* 숨기기 */
     display:none
 }
 .back{
-    width:43px;
-    height:33px;
+    width:33px;
+    height:25px;
     background:url(../images/shop/back.png)no-repeat;
     text-indent:-9999px;
     position:absolute;
-    left:35px;top:33px;
+    left:3%;top:22px;
+    z-index:1;
 }
 .gnb{
     margin-top:207px;
-    margin-left:35px;
-    margin-right:35px;
+    margin-left:3%;
+    margin-right:3%;
 }
 .gnb a{
     color:#fff
@@ -50,21 +58,25 @@
     margin-top:20px;
 }
 .menu li{
-    margin-left:53px;
+    margin-left:5%;
     font-size:26px;
     font-weight:500
 }
+#shop_cate{
+    display:none;
+}
 #shop_cate a{
-    margin-left:35px;
+    margin-left:50px;
     font-size:16px;
-    color:#a08d7c
+    color:#999;
 }
 .gnb1_more{
     position:absolute;
-    right:40px;
-    top:210px;
+    right:5%;
+    top:205px;
     width:23px;
     height:24px;
+    cursor:pointer;
 }
 .gnb2{
     margin-top:30px;
@@ -86,13 +98,13 @@
     padding:0
 }
 .search_box1 button{
-    width:30px;
-    height:30px;
+    width:25px;
+    height:25px;
     background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
     border:0 none;
     position:relative;
-    top:-40px;
+    top:-32px;
     cursor:pointer;
     float:right
 }
@@ -102,72 +114,75 @@
     height:40px;
     font-size:14px;
     box-sizing:border-box;
-    background:#d6c9c1;
+    background:#393939;
     border:0 none;
     border-bottom:2px solid#fff;
     outline:0 none
 }
 .gnb_exit{
     display:block;
-    width:35px;
-    height:35px;
+    width:22px;
+    height:22px;
     background:url(../images/exit.png)no-repeat;
     text-indent:-9999px;
     position:relative;
-    top:-160px;
+    top:-155px;
     float:right;
 }
 .fixed_menu{
     position:fixed;
-    border-top:1px solid#a08d7c;
+    border-top:1px solid#393939;
     background:#fff;
     left:0;
     right:0;
     bottom:0;
-    height:6rem;
+    height:5rem;
     z-index:100
 }
 .fixed_menu ul{
     display:flex;
     justify-content:center;
-    margin-left:35px;
-    margin-right:35px;
+    margin-left:5%;
+    margin-right:5%;
 }
 .fixed_menu li{
-    padding:30px 11.5% 30px 11.5%;
+    padding:25px 11.5% 25px 11.5%;
 }
 .f_m1{
     display:block;
-    width:41px;
-    height:33px;
-    background:url(../images/fm_menu.png)no-repeat;
+    width:24px;
+    height:20px;
+    background:url(../images/login/fm_menu.png)no-repeat;
     text-indent:-9999px;
+    margin-top:4px
 }
 .f_m2{
     display:block;
-    width:30px;
-    height:30px;
-    background:url(../images/fm_home.png)no-repeat;
+    width:25px;
+    height:25px;
+    background:url(../images/login/fm_home.png)no-repeat;
     text-indent:-9999px;
 }
 .f_m3{
     display:block;
-    width:36px;
-    height:30px;
-    background:url(../images/fm_wish.png)no-repeat;
+    width:29px;
+    height:24px;
+    background:url(../images/login/fm_wish.png)no-repeat;
     text-indent:-9999px;
+    margin-top:2px
 }
 .f_m4{
     display:block;
-    width:34px;
-    height:32px;
-    background:url(../images/fm_my.png)no-repeat;
+    width:27px;
+    height:25px;
+    background:url(../images/login/fm_my.png)no-repeat;
     text-indent:-9999px;
 }
 .sch_menu{
     position:relative;
-    top:-37px;
-    float:right;
+    top:-35px;
+    display:flex;
+    justify-content:right;
 }
 .search{
     display:block;
@@ -176,8 +191,8 @@
     background:url(../images/search.png)no-repeat;
     text-indent:-9999px;
     border:0 none;
-    margin-right:30px;
-    float:left;
+    margin-right:3%;
+    margin-top:0
 }
 .cart{
     display:block;
@@ -185,14 +200,13 @@
     height:30px;
     background:url(../images/m_cart.png)no-repeat;
     text-indent:-9999px;
-    float:left;
-    margin-right:35px;
+    margin-right:3%;
 }
 .search_box2{
     width:100%;
     box-sizing:border-box;
     position:absolute;
-    top:102px;
+    top:69px;
     border-bottom:1px solid#a08d7c;
     /* 숨기기 */
     display:none;
@@ -253,10 +267,10 @@
     background-size:cover;
     position:absolute;
     margin-top:-155px;
-    right:35px
+    right:3%
 }
 .shop{
-    margin-top:103px;
+    margin-top:70px;
     border-top:1px solid#000
 }
 .shop h2{
@@ -346,7 +360,7 @@ del{
     bottom:140px;
     right:5%;
     overflow:hidden;
-    z-index: 20;
+    z-index: 10;
 }
 #toTop{
     transition:all 0.3s ease-out;
@@ -355,7 +369,9 @@ del{
     transform:translateY(-5px);
 }
 .footer{
-    margin-top:50px;
+    position:relative;
+    z-index:0;
+    top:50px;
     font-size:14px;
     clear: both;
 }
@@ -437,6 +453,9 @@ del{
 .f_link li a{
     color:#a08d7c;
 }
+.f_link li a:hover{
+    color:#393939
+}
 .sns ul{
     display:flex;
     justify-content:center;
@@ -446,6 +465,9 @@ del{
     margin-bottom:100px;
 }
 @media screen and (max-width:767px){
+    .sch_exit{
+        margin-top:-175px;
+    }
     .p_wish{
         width:17px;
         height:14px;
@@ -459,5 +481,8 @@ del{
     .p_cart img{
         width:12px;
         height:15px;
+    }
+    .sns li{
+        margin-bottom:100px;
     }
 }

@@ -40,10 +40,10 @@ $(function () {
 	let num = 0;
 	$(".gnb1_more, .gnb1").click(function () {
 		if(num == 0) {
-			$(".gnb1_more").attr("src", "../images/shop_more.png");
+			$(".gnb1_more").attr("src", "../images/shop_hide.png");
 			num = 1;
 		}else {
-			$(".gnb1_more").attr("src", "../images/shop_hide.png");
+			$(".gnb1_more").attr("src", "../images/shop_more.png");
 			num = 0;
 		}
 	});
