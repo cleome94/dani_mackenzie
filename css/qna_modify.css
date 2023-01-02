@@ -48,6 +48,10 @@
     font-size:16px;
     color:#a08d7c
 }
+#shop_cate a:hover{
+    color:#000;
+    font-weight:bold;
+}
 .gnb2{
     margin-top:30px;
 }

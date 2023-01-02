@@ -127,5 +127,5 @@ button{
     display:none;
 }
 .err_txt{font-size:14px; font-weight:500; color:tomato}
-.blueText{font-weight:bold;color:rgb(40, 92, 188)}
-.redText{font-weight:bold;color:rgb(251, 77, 14)}
+.blueText{font-size:14px;font-weight:500;color:rgb(57, 163, 30)}
+.redText{font-size:14px;font-weight:500;color:rgb(251, 50, 14)}

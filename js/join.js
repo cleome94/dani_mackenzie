@@ -111,16 +111,17 @@ function join_form_check(){
 };
 function getCont( g_id ){
     var dsp  = document.getElementById('dsp');
-
-    // 글자수 체크 안할꺼면 if else문 생략하고 변수부터 작성하면 됨
+    
     if(g_id.length < 4 || g_id.length > 12){
-        dsp.innerHTML = '4~12자의 영문 대소문자와 숫자로 입력해 주세요.';
+        dsp.innerHTML = '아이디는 4~12글자만 입력할 수 있습니다.';
         dsp.className = 'redText';
     } else{
         var xmlhttp = fncGetXMLHttpRequest();
 
         // 아이디를 체크할 php 페이지에 체크 하려하는 id 값을 파라미터로 전송
-        xmlhttp.open('GET', 'id_check_ajax_php?u_id='+g_id, false);
+        // alert('id_check_ajax.php?u_id='+g_id);
+        // return false;
+        xmlhttp.open('GET', 'id_check_ajax.php?u_id='+g_id, false);
 
         xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
 
@@ -129,12 +130,13 @@ function getCont( g_id ){
                 if( xmlhttp.status==500 || xmlhttp.status==404 || xmlhttp.status==403 )
                     alert( xmlhttp.status );
                 else{
-                     var txt = xmlhttp.responseText;    // 처리페이지에서 넘겨받은 값
-                     txt = txt.replace(/\n/g, ""); // 행바꿈 제거
-                     txt = txt.replace(/\r/g, ""); // 엔터값 제거
-                     txt = txt.replace(/\s+/, ""); // 왼쪽 공백 제거
-                     txt = txt.replace(/\s+$/g, ""); // 오른쪽 공백 제거
-                     alert("페이지에 입력된 값 : " + g_id + "\r처리 페이지에서 반환된 값 : " + txt);
+                    var txt = xmlhttp.responseText;
+                    txt = txt.replace(/\n/g, ""); // 행바꿈 제거
+                    txt = txt.replace(/\r/g, ""); // 엔터값 제거
+                    txt = txt.replace(/\s+/, ""); // 왼쪽 공백 제거
+                    txt = txt.replace(/\s+$/g, ""); // 오른쪽 공백 제거
+                    // alert("페이지에 입력된 값 : " + g_id + "\r처리 페이지에서 반환된 값 : " + txt);
+
                     if(txt=='Y') {
                         dsp.innerHTML = '이미 가입된 아이디입니다.';
                         dsp.className = 'redText';
@@ -148,8 +150,6 @@ function getCont( g_id ){
     }
     xmlhttp.send();
 }
-
-// 브라우저 호환성 체크   수정할 거 없음
 
 function fncGetXMLHttpRequest(){
     if (window.ActiveXObject){

@@ -70,6 +70,10 @@
     font-size:16px;
     color:#999;
 }
+#shop_cate a:hover{
+    color:#000;
+    font-weight:bold;
+}
 .gnb1_more{
     position:absolute;
     right:5%;

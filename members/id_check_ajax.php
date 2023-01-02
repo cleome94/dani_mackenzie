@@ -1,8 +1,8 @@
-  <?php
-  $u_id = $_GET['u_id'];
+<?php
+  $u_id = $_GET["u_id"];
   
   $connect = mysqli_connect("localhost","root","");
-  $db_con = mysqli_select_db($connect, "front");
+  $db_con = mysqli_select_db($connect, "dani_mackenzie");
  
   $sql="select * from members where u_id='$u_id'";
   $result=mysqli_query($connect, $sql);
