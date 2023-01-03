@@ -470,12 +470,12 @@ del{
 }
 @media screen and (max-width:767px){
     .sch_exit{
-        margin-top:-175px;
+        margin-top:-160px;
     }
     .p_wish{
         width:17px;
         height:14px;
-        margin-top:12px;
+        margin-top:13px;
         margin-left:-55px;
     }
     .p_cart{

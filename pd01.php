@@ -130,7 +130,7 @@ if($e_pageNum > $total_page){
             <ul>
                 <li id="f_m1"><a href="#" class="f_m1">메뉴 열기</a></li>
                 <li id="f_m2"><a href="index.php" class="f_m2">홈</a></li>
-                <li id="f_m3"><a href="#" class="f_m3">찜 목록</a></li>
+                <li id="f_m3"><img src="images/dp/wish_before.png" alt="찜 목록" class="f_m3"><a href="#"></a></li>
                 <li id="f_m4" onclick="location.href='#none'"><a href="#none" class="f_m4">구매하기</a></li>
             </ul>
         </section>

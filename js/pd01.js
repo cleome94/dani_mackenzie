@@ -79,6 +79,19 @@ $(function () {
 		}
 	});
 });
+$(function () {
+	
+	let num = 0;
+	$(".f_m3").click(function () {
+		if(num == 0) {
+			$(this).attr("src", "images/dp/wish_after.png");
+			num = 1;
+		}else {
+			$(this).attr("src", "images/dp/wish_before.png");
+			num = 0;
+		}
+	});
+});
 function logout(){
     var ck = confirm("로그아웃 하시겠습니까?");
     if(ck){

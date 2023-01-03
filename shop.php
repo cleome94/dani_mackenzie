@@ -153,8 +153,8 @@ $total = mysqli_num_rows($result);
         <section class="perfume">
             <h2 class="hide">퓨어오일퍼퓸</h2>
             <div class="perfume1_wrap">
-                <div class="perfume1" onclick="location.href='pd01.php'">
-                    <img src="images/shop/perfume1.jpg" alt="" class="perfume_img">
+                <div class="perfume1">
+                    <img src="images/shop/perfume1.jpg" alt="" class="perfume_img" onclick="location.href='pd01.php'">
                     <img src="images/shop/wish_before.png" alt="상품 찜하기" class="p_wish">
                     <span class="p_cart"><img src="images/shop/cart.png" alt="장바구니 담기"></span>
                 </div>

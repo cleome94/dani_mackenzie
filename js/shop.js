@@ -62,12 +62,12 @@ $(function () {
 $(function () {
 	
 	let num = 0;
-	$(".gnb1_more, .gnb1").click(function () {
+	$(".p_wish").click(function () {
 		if(num == 0) {
-			$(".gnb1_more").attr("src", "images/shop_hide.png");
+			$(this).attr("src", "images/shop/wish_after.png");
 			num = 1;
 		}else {
-			$(".gnb1_more").attr("src", "images/shop_more.png");
+			$(this).attr("src", "images/shop/wish_before.png");
 			num = 0;
 		}
 	});

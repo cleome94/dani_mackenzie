@@ -150,12 +150,9 @@
     text-indent:-9999px;
 }
 .f_m3{
-    display:block;
-    width:29px;
-    height:24px;
-    background:url(../images/login/fm_wish.png)no-repeat;
-    text-indent:-9999px;
-    margin-top:2px
+    margin-top:2px;
+    cursor:pointer;
+    width:100%;
 }
 .f_m4{
     color:#fff;
@@ -176,7 +173,7 @@
     margin-top:15px;
     width:auto;
     background: #393939;
-    padding:10px 10% 10px 10%;
+    padding:13px 10% 10px 10%;
     border-radius:5px;
     cursor:pointer;
 }
@@ -542,7 +539,7 @@ table{
 }
 @media screen and (max-width:767px){
 .sch_exit{
-    margin-top:-175px;
+    margin-top:-160px;
 }
 .popular{
     margin-left:0px;
