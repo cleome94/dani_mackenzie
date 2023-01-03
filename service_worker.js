@@ -1,10 +1,10 @@
-const sCacheName = "Dani Mackenzie";
+const sCacheName = "Tarot of Oz";
 const aFilesToCache = [
     '.',
     './index.php',
     './splash.html',
     './manifest.json',
-    './images/hello-dani_mackenzie.png'
+    './images/hello-dani_mackenzie.jpg'
 ];
 self.addEventListener("install", pEvent => {
     console.log("서비스 워커 설치 완료!");

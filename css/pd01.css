@@ -130,12 +130,9 @@
 }
 .fixed_menu ul{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     margin-left:5%;
     margin-right:5%;
-}
-.fixed_menu li{
-    padding:25px 11.5% 25px 11.5%;
 }
 .f_m1{
     display:block;
@@ -161,11 +158,27 @@
     margin-top:2px
 }
 .f_m4{
-    display:block;
-    width:27px;
-    height:25px;
-    background:url(../images/login/fm_my.png)no-repeat;
-    text-indent:-9999px;
+    color:#fff;
+}
+#f_m1{
+    margin-top:15px;
+    padding:10px 5% 10px 5%;
+}
+#f_m2{
+    margin-top:15px;
+    padding:10px 5% 10px 5%;
+}
+#f_m3{
+    margin-top:15px;
+    padding:10px 5% 10px 5%;
+}
+#f_m4{
+    margin-top:15px;
+    width:auto;
+    background: #393939;
+    padding:10px 10% 10px 10%;
+    border-radius:5px;
+    cursor:pointer;
 }
 .u_menu{
     position:relative;
